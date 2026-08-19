@@ -188,6 +188,17 @@ export type User = {
   firstName: string;
   lastName: string;
   email: string;
+  phone?: string;
+  password?: string;
+  joinedAt?: string;
+  address?: {
+    line1: string;
+    line2?: string;
+    city: string;
+    state?: string;
+    postcode: string;
+    country: string;
+  };
 };
 
 /**
