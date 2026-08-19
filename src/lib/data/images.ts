@@ -20,6 +20,11 @@ export function photo(id: string, width = 1400, height?: number): string {
 
 /** Handbag / accessory still-life frames used for product imagery. */
 export const BAG_SHOTS = [
+  "/images/hero_luxury_bag.jpg", // Generated Tan Top-Handle Luxury Handbag
+  "/images/chanel_classic_black.jpg", // Generated Chanel Black Quilted Flap Handbag
+  "/images/dior_lady_latte.jpg", // Generated Dior Lady Latte Quilted Handbag
+  "/images/bottega_jodie_brown.jpg", // Generated Bottega Jodie Woven Leather Handbag
+  "/images/goyard_tote_black.jpg", // Generated Goyard Black Chevron Tote Bag
   "photo-1584917865442-de89df76afd3", // Black luxury leather top-handle handbag
   "photo-1548036328-c9fa89d128fa", // Black quilted leather gold chain flap handbag
   "photo-1590874103328-eac38a683ce7", // Cognac tan structured top-handle handbag
@@ -41,15 +46,15 @@ export const BAG_SHOTS = [
   "photo-1523170335258-f5ed11844a49", // Gold hardware lock on luxury handbag
   "photo-1600950207944-0d63e8edbc3f", // Turn-lock clasp on luxury leather handbag
   "photo-1563178406-4cdc2923acbc", // Metallic clasp detail on luxury handbag
-  "photo-1614179689702-355944cd0918", // Fine leather grain texture on luxury handbag
-  "photo-1517254797898-04edd251bfb3", // Quilted leather hardware close-up on handbag
-  "photo-1509319117193-57bab727e09d", // Taupe neutral luxury handbag
-  "photo-1516762689617-e1cffcef479d", // High fashion model carry with luxury black handbag
-  "photo-1509631179647-0177331693ae", // Model carrying top-handle luxury handbag
 ] as const;
 
 /** Wide editorial frames for heroes, banners and collection headers — all featuring luxury handbags. */
 export const EDITORIAL = [
+  "/images/hero_luxury_bag.jpg", // Generated Hero Tan Luxury Handbag
+  "/images/chanel_classic_black.jpg", // Generated Black Quilted Flap Handbag
+  "/images/dior_lady_latte.jpg", // Generated Dior Lady Latte Handbag
+  "/images/bottega_jodie_brown.jpg", // Generated Bottega Jodie Woven Handbag
+  "/images/goyard_tote_black.jpg", // Generated Goyard Chevron Tote
   "photo-1590874103328-eac38a683ce7", // Cognac tan Hermès style top-handle luxury handbag
   "photo-1548036328-c9fa89d128fa", // Black quilted luxury flap handbag
   "photo-1584917865442-de89df76afd3", // Minimal luxury leather structured handbag
@@ -61,20 +66,15 @@ export const EDITORIAL = [
   "photo-1566150905458-1bf1fc113f0d", // Crimson red luxury leather handbag
   "photo-1591561954557-26941169b49e", // Emerald green luxury top-handle handbag
   "photo-1581338834647-b0fb40704e21", // Luxury handbag on marble display pedestal
-  "photo-1553062407-98eeb64c6a62", // Monogrammed luxury canvas handbag
-  "photo-1512436991641-6745cdb1723f", // Structured leather saddle handbag
-  "photo-1544816155-12df9643f363", // Burgundy luxury leather top-handle handbag
-  "photo-1590739225287-bd2ea5183db7", // Powder pink luxury handbag
-  "photo-1601924994987-69e26d50dc26", // Minimal beige leather shoulder handbag
 ] as const;
 
 /** Handbag display pedestals, boutique handbag cases and consultation setups. */
 export const INTERIORS = [
+  "/images/hero_luxury_bag.jpg", // Generated Tan Luxury Handbag Showcase
+  "/images/dior_lady_latte.jpg", // Generated Dior Handbag Salon Display
+  "/images/bottega_jodie_brown.jpg", // Generated Woven Handbag Display
   "photo-1581338834647-b0fb40704e21", // Luxury handbag on marble pedestal
   "photo-1575032617751-6ddec2089882", // Luxury handbag display shelf
-  "photo-1590874103328-eac38a683ce7", // Top-handle luxury handbag in private salon
-  "photo-1548036328-c9fa89d128fa", // Quilted handbag display suite
-  "photo-1584917865442-de89df76afd3", // Minimalist handbag vault showcase
 ] as const;
 
 /** Curators and models presenting/styling luxury handbags. */

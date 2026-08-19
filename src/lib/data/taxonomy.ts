@@ -16,7 +16,7 @@ export const brands: Brand[] = [
     tagline: "The benchmark for saddlery-born craft.",
     description:
       "Founded as a harness workshop, Hermès still builds each bag by a single artisan, start to finish. Waiting lists are long and supply is deliberately scarce — which is precisely why the secondary market matters.",
-    image: photo("photo-1590874103328-eac38a683ce7", 1200, 1500),
+    image: photo("/images/hero_luxury_bag.jpg", 1200, 1500),
     featured: true,
     order: 1,
   },
@@ -27,7 +27,7 @@ export const brands: Brand[] = [
     tagline: "Quilted leather, chain strap, permanence.",
     description:
       "The Classic Flap redefined how a bag could be carried. Diamond quilting, the interlocking clasp and a chain shoulder strap remain among the most recognisable signatures in fashion.",
-    image: photo("photo-1548036328-c9fa89d128fa", 1200, 1500),
+    image: photo("/images/chanel_classic_black.jpg", 1200, 1500),
     featured: true,
     order: 2,
   },
@@ -38,7 +38,7 @@ export const brands: Brand[] = [
     tagline: "Travel-born, coated canvas, built to be used.",
     description:
       "Trunk-making heritage translated into everyday luggage. Monogram and Damier canvas age gracefully, and the house's collaborations have created some of the most sought-after limited runs of the last two decades.",
-    image: photo("photo-1584917865442-de89df76afd3", 1200, 1500),
+    image: photo("/images/goyard_tote_black.jpg", 1200, 1500),
     featured: true,
     order: 3,
   },
@@ -49,7 +49,7 @@ export const brands: Brand[] = [
     tagline: "Hand-painted chevron, quietly discreet.",
     description:
       "No advertising, no e-commerce, few boutiques. Goyardine canvas is applied by hand, and personalisation is part of the ritual — which makes each piece difficult to replicate and difficult to find.",
-    image: photo("photo-1553062407-98eeb64c6a62", 1200, 1500),
+    image: photo("/images/goyard_tote_black.jpg", 1200, 1500),
     featured: true,
     order: 4,
   },
@@ -60,7 +60,7 @@ export const brands: Brand[] = [
     tagline: "Couture proportion, cannage precision.",
     description:
       "From the Lady Dior's cannage topstitching to the Saddle's revived curve, the house treats a handbag as an extension of couture construction.",
-    image: photo("photo-1594223274512-ad4803739b7c", 1200, 1500),
+    image: photo("/images/dior_lady_latte.jpg", 1200, 1500),
     featured: true,
     order: 5,
   },
@@ -71,7 +71,7 @@ export const brands: Brand[] = [
     tagline: "Florentine leather, unmistakable hardware.",
     description:
       "Equestrian hardware, the horsebit and the web stripe — Gucci's archive is deep, and its reissues have made vintage references newly collectible.",
-    image: photo("photo-1512436991641-6745cdb1723f", 1200, 1500),
+    image: photo("/images/hero_luxury_bag.jpg", 1200, 1500),
     featured: true,
     order: 6,
   },
@@ -82,7 +82,7 @@ export const brands: Brand[] = [
     tagline: "Intellectual minimalism in nylon and saffiano.",
     description:
       "Prada made technical nylon a luxury material and saffiano leather a modern classic. Restraint is the point.",
-    image: photo("photo-1601924994987-69e26d50dc26", 1200, 1500),
+    image: photo("/images/chanel_classic_black.jpg", 1200, 1500),
     featured: false,
     order: 7,
   },
@@ -93,7 +93,7 @@ export const brands: Brand[] = [
     tagline: "Roman craft with a sense of humour.",
     description:
       "The Baguette turned a shoulder bag into a cultural object. Fendi's fur, leather and shearling work remains among the most technically ambitious in Italy.",
-    image: photo("photo-1517254797898-04edd251bfb3", 1200, 1500),
+    image: photo("/images/dior_lady_latte.jpg", 1200, 1500),
     featured: false,
     order: 8,
   },
@@ -104,7 +104,7 @@ export const brands: Brand[] = [
     tagline: "When your own initials are enough.",
     description:
       "Intrecciato weaving requires no logo. Bottega's leather is chosen for how it softens, and its silhouettes have become the quiet luxury reference point.",
-    image: photo("photo-1614179689702-355944cd0918", 1200, 1500),
+    image: photo("/images/bottega_jodie_brown.jpg", 1200, 1500),
     featured: false,
     order: 9,
   },

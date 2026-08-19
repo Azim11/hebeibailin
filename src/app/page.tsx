@@ -33,7 +33,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero image={photo("photo-1590874103328-eac38a683ce7", 2400, 1500)} />
+      <Hero image={photo("/images/hero_luxury_bag.jpg", 2400, 1500)} />
 
       <FeaturedCollection products={toSummaries(featured, 1)} />
 
@@ -45,13 +45,13 @@ export default async function HomePage() {
 
       <RareFinds products={toSummaries(rareFinds, 1)} />
 
-      <ConciergeSection image={photo("photo-1509631179647-0177331693ae", 1400, 1600)} />
+      <ConciergeSection image={photo("/images/dior_lady_latte.jpg", 1400, 1600)} />
 
-      <StoryTeaser image={photo("photo-1584917865442-de89df76afd3", 2000, 1200)} />
+      <StoryTeaser image={photo("/images/bottega_jodie_brown.jpg", 2000, 1200)} />
 
       <FounderMessage />
 
-      <SellSection image={photo("photo-1548036328-c9fa89d128fa", 1400, 1600)} />
+      <SellSection image={photo("/images/chanel_classic_black.jpg", 1400, 1600)} />
 
       <ShowroomSection />
 
