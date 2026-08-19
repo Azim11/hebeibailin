@@ -19,7 +19,7 @@ import {
   getRareFinds,
   toSummaries,
 } from "@/lib/cms";
-import { BAG_SHOTS, photo } from "@/lib/data/images";
+import { EDITORIAL, photo } from "@/lib/data/images";
 
 export default async function HomePage() {
   const [featured, newArrivals, rareFinds] = await Promise.all([
@@ -30,7 +30,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero image={photo(BAG_SHOTS[0], 2400, 1500)} />
+      <Hero image={photo(EDITORIAL[0], 2400, 1500)} />
 
       <FeaturedCollection products={toSummaries(featured, 1)} />
 
@@ -40,13 +40,13 @@ export default async function HomePage() {
 
       <RareFinds products={toSummaries(rareFinds, 1)} />
 
-      <ConciergeSection image={photo(BAG_SHOTS[5], 1400, 1600)} />
+      <ConciergeSection image={photo(EDITORIAL[2], 1400, 1600)} />
 
-      <StoryTeaser image={photo(BAG_SHOTS[4], 2000, 1200)} />
+      <StoryTeaser image={photo(EDITORIAL[1], 2000, 1200)} />
 
       <FounderMessage />
 
-      <SellSection image={photo(BAG_SHOTS[1], 1400, 1600)} />
+      <SellSection image={photo(EDITORIAL[5], 1400, 1600)} />
 
       <ShowroomSection />
 
@@ -55,7 +55,7 @@ export default async function HomePage() {
       <PressStrip />
 
       <InstagramGrid
-        images={BAG_SHOTS.slice(0, 6).map((id) => photo(id, 700, 700))}
+        images={EDITORIAL.map((id) => photo(id, 700, 700))}
       />
 
       <NewsletterSection />

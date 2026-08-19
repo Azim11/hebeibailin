@@ -14,9 +14,22 @@ export const BAG_SHOTS = [
   "/images/bags/forest-satchel.png",
 ] as const;
 
-export const EDITORIAL = BAG_SHOTS;
-export const INTERIORS = BAG_SHOTS;
-export const PORTRAITS = BAG_SHOTS;
+export const EDITORIAL = [
+  "/images/editorial/atelier.png",
+  "/images/editorial/artisan-craft.png",
+  "/images/editorial/concierge-portrait.png",
+  "/images/editorial/authentication-tools.png",
+  "/images/editorial/showroom.png",
+  "/images/editorial/packaging.png",
+] as const;
+
+export const INTERIORS = [
+  EDITORIAL[4],
+  EDITORIAL[0],
+  EDITORIAL[1],
+] as const;
+
+export const PORTRAITS = [EDITORIAL[2]] as const;
 
 /** Keep the existing data API while ensuring every image resolves locally. */
 export function photo(id: string, width = 1400, height?: number): string {

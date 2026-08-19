@@ -83,7 +83,7 @@ export const authenticationSteps = [
 export const founder = {
   name: "Élise Rouvière",
   title: "Founder & Head of Curation",
-  portrait: photo(PORTRAITS[5], 1200, 1500),
+  portrait: photo(PORTRAITS[0], 1200, 1500),
   message:
     "I started buying and selling bags because I could not bear to see a beautifully made object treated as disposable. A well-built handbag outlives trends, outlives its first owner, and often becomes the thing a family actually keeps. My work is simply to make sure the right piece reaches the right person, honestly described, and in the condition I would want to receive it myself.",
   placeholder: true,
@@ -109,9 +109,9 @@ export const storyChapters = [
 ];
 
 export const showroomImages = [
-  photo(INTERIORS[2], 1400, 900),
-  photo(INTERIORS[4], 1400, 1000),
-  photo(INTERIORS[0], 1400, 1000),
+  photo(INTERIORS[0], 1400, 900),
+  photo(INTERIORS[1], 1400, 1000),
+  photo(INTERIORS[2], 1400, 1000),
 ];
 
 export const instagramPosts = [
