@@ -20,7 +20,7 @@ export default function AboutPage() {
         eyebrow="Our Story"
         title="About Us"
         description="A curated house of exceptional handbags, built on craftsmanship, provenance and honest description."
-        image="/images/about_banner.jpg"
+        image={EDITORIAL[2]}
       />
 
       <Container size="narrow" className="py-16 lg:py-24">
@@ -44,7 +44,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="relative aspect-16/9 w-full overflow-hidden rounded-xs bg-warm shadow-xs">
               <Image
-                src="/images/about_banner.jpg"
+                src={EDITORIAL[2]}
                 alt="Hebei Bailin curation studio and atelier"
                 fill
                 sizes="(min-width: 1280px) 1440px, 100vw"

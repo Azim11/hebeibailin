@@ -21,7 +21,7 @@ import {
   getRareFinds,
   toSummaries,
 } from "@/lib/cms";
-import { BAG_SHOTS, EDITORIAL, INTERIORS, photo } from "@/lib/data/images";
+import { BAG_SHOTS, photo } from "@/lib/data/images";
 
 export default async function HomePage() {
   const [featured, brands, newArrivals, rareFinds] = await Promise.all([
@@ -33,7 +33,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero image={photo("/images/hero_luxury_bag.jpg", 2400, 1500)} />
+      <Hero image={photo(BAG_SHOTS[0], 2400, 1500)} />
 
       <FeaturedCollection products={toSummaries(featured, 1)} />
 
@@ -45,13 +45,13 @@ export default async function HomePage() {
 
       <RareFinds products={toSummaries(rareFinds, 1)} />
 
-      <ConciergeSection image={photo("/images/dior_lady_latte.jpg", 1400, 1600)} />
+      <ConciergeSection image={photo(BAG_SHOTS[5], 1400, 1600)} />
 
-      <StoryTeaser image={photo("/images/bottega_jodie_brown.jpg", 2000, 1200)} />
+      <StoryTeaser image={photo(BAG_SHOTS[4], 2000, 1200)} />
 
       <FounderMessage />
 
-      <SellSection image={photo("/images/chanel_classic_black.jpg", 1400, 1600)} />
+      <SellSection image={photo(BAG_SHOTS[1], 1400, 1600)} />
 
       <ShowroomSection />
 

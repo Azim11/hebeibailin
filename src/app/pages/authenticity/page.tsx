@@ -13,7 +13,6 @@ import {
   Scale,
   Search,
   ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageBanner } from "@/components/shop/PageBanner";
@@ -106,7 +105,7 @@ export default function AuthenticityPage() {
         eyebrow="Provenance & Verification"
         title="The Science of Authenticity"
         description="Every piece in our vault undergoes exhaustive, multi-point physical verification conducted by master luxury specialists. No algorithms, no guesswork — only uncompromising precision."
-        image="/images/about_banner.jpg"
+        image="/images/bags/black-tote.png"
       />
 
       {/* Guarantee Highlights Bar */}
@@ -240,7 +239,7 @@ export default function AuthenticityPage() {
           <Reveal>
             <div className="relative aspect-4/3 w-full overflow-hidden border border-line bg-warm shadow-xs">
               <Image
-                src="/images/hero_luxury_bag.jpg"
+                src="/images/bags/espresso-structured.png"
                 alt="Hebei Bailin authentication certificate and inspection tools"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

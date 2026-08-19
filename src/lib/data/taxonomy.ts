@@ -1,5 +1,5 @@
 import type { Brand, Category, Collection } from "@/lib/types";
-import { EDITORIAL, INTERIORS, photo } from "./images";
+import { BAG_SHOTS, EDITORIAL, photo } from "./images";
 
 /**
  * Brands, collections and silhouettes.
@@ -16,7 +16,7 @@ export const brands: Brand[] = [
     tagline: "The benchmark for saddlery-born craft.",
     description:
       "Founded as a harness workshop, Hermès still builds each bag by a single artisan, start to finish. Waiting lists are long and supply is deliberately scarce — which is precisely why the secondary market matters.",
-    image: photo("/images/hero_luxury_bag.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[0], 1200, 1500),
     featured: true,
     order: 1,
   },
@@ -27,7 +27,7 @@ export const brands: Brand[] = [
     tagline: "Quilted leather, chain strap, permanence.",
     description:
       "The Classic Flap redefined how a bag could be carried. Diamond quilting, the interlocking clasp and a chain shoulder strap remain among the most recognisable signatures in fashion.",
-    image: photo("/images/chanel_classic_black.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[1], 1200, 1500),
     featured: true,
     order: 2,
   },
@@ -38,7 +38,7 @@ export const brands: Brand[] = [
     tagline: "Travel-born, coated canvas, built to be used.",
     description:
       "Trunk-making heritage translated into everyday luggage. Monogram and Damier canvas age gracefully, and the house's collaborations have created some of the most sought-after limited runs of the last two decades.",
-    image: photo("/images/goyard_tote_black.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[2], 1200, 1500),
     featured: true,
     order: 3,
   },
@@ -49,7 +49,7 @@ export const brands: Brand[] = [
     tagline: "Hand-painted chevron, quietly discreet.",
     description:
       "No advertising, no e-commerce, few boutiques. Goyardine canvas is applied by hand, and personalisation is part of the ritual — which makes each piece difficult to replicate and difficult to find.",
-    image: photo("/images/goyard_tote_black.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[3], 1200, 1500),
     featured: true,
     order: 4,
   },
@@ -60,7 +60,7 @@ export const brands: Brand[] = [
     tagline: "Couture proportion, cannage precision.",
     description:
       "From the Lady Dior's cannage topstitching to the Saddle's revived curve, the house treats a handbag as an extension of couture construction.",
-    image: photo("/images/dior_lady_latte.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[4], 1200, 1500),
     featured: true,
     order: 5,
   },
@@ -71,7 +71,7 @@ export const brands: Brand[] = [
     tagline: "Florentine leather, unmistakable hardware.",
     description:
       "Equestrian hardware, the horsebit and the web stripe — Gucci's archive is deep, and its reissues have made vintage references newly collectible.",
-    image: photo("/images/hero_luxury_bag.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[5], 1200, 1500),
     featured: true,
     order: 6,
   },
@@ -82,7 +82,7 @@ export const brands: Brand[] = [
     tagline: "Intellectual minimalism in nylon and saffiano.",
     description:
       "Prada made technical nylon a luxury material and saffiano leather a modern classic. Restraint is the point.",
-    image: photo("/images/chanel_classic_black.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[1], 1200, 1500),
     featured: false,
     order: 7,
   },
@@ -93,7 +93,7 @@ export const brands: Brand[] = [
     tagline: "Roman craft with a sense of humour.",
     description:
       "The Baguette turned a shoulder bag into a cultural object. Fendi's fur, leather and shearling work remains among the most technically ambitious in Italy.",
-    image: photo("/images/dior_lady_latte.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[3], 1200, 1500),
     featured: false,
     order: 8,
   },
@@ -104,7 +104,7 @@ export const brands: Brand[] = [
     tagline: "When your own initials are enough.",
     description:
       "Intrecciato weaving requires no logo. Bottega's leather is chosen for how it softens, and its silhouettes have become the quiet luxury reference point.",
-    image: photo("/images/bottega_jodie_brown.jpg", 1200, 1500),
+    image: photo(BAG_SHOTS[4], 1200, 1500),
     featured: false,
     order: 9,
   },
@@ -115,7 +115,7 @@ export const brands: Brand[] = [
     tagline: "Celine, Loewe, Saint Laurent and beyond.",
     description:
       "A rotating selection from houses we admire — acquired when the piece, the condition and the provenance are right.",
-    image: photo("photo-1548036328-c9fa89d128fa", 1200, 1500),
+    image: photo(BAG_SHOTS[5], 1200, 1500),
     featured: false,
     order: 10,
   },
@@ -141,7 +141,7 @@ export const collections: Collection[] = [
     slug: "new-arrivals",
     description:
       "The most recent pieces to complete authentication and enter the collection.",
-    image: photo("photo-1594223274512-ad4803739b7c", 1800, 1000),
+    image: photo(EDITORIAL[0], 1800, 1000),
     inMegaMenu: true,
     order: 1,
   },
@@ -151,7 +151,7 @@ export const collections: Collection[] = [
     slug: "rare-finds",
     description:
       "Exceptional pieces for collectors who appreciate the extraordinary.",
-    image: photo("photo-1590874103328-eac38a683ce7", 1800, 1000),
+    image: photo(EDITORIAL[1], 1800, 1000),
     inMegaMenu: true,
     order: 2,
   },
@@ -161,7 +161,7 @@ export const collections: Collection[] = [
     slug: "limited-edition",
     description:
       "Seasonal runs, collaborations and special orders produced in small numbers.",
-    image: photo("photo-1566150905458-1bf1fc113f0d", 1800, 1000),
+    image: photo(EDITORIAL[2], 1800, 1000),
     inMegaMenu: true,
     order: 3,
   },
@@ -171,7 +171,7 @@ export const collections: Collection[] = [
     slug: "vintage",
     description:
       "Pieces from earlier decades, selected for character as much as condition.",
-    image: photo("photo-1637759292654-a12cb2be085e", 1800, 1000),
+    image: photo(EDITORIAL[3], 1800, 1000),
     inMegaMenu: true,
     order: 4,
   },
@@ -181,7 +181,7 @@ export const collections: Collection[] = [
     slug: "investment-bags",
     description:
       "Silhouettes with a long record of holding their value on the secondary market.",
-    image: photo("photo-1548036328-c9fa89d128fa", 1800, 1000),
+    image: photo(EDITORIAL[4], 1800, 1000),
     inMegaMenu: true,
     order: 5,
   },
@@ -191,7 +191,7 @@ export const collections: Collection[] = [
     slug: "everyday-luxury",
     description:
       "Bags built to be carried daily — forgiving leathers and practical proportions.",
-    image: photo("photo-1575032617751-6ddec2089882", 1800, 1000),
+    image: photo(EDITORIAL[5], 1800, 1000),
     inMegaMenu: true,
     order: 6,
   },
@@ -200,7 +200,7 @@ export const collections: Collection[] = [
     name: "Statement Pieces",
     slug: "statement-pieces",
     description: "Colour, exotic texture and silhouettes that carry a room.",
-    image: photo("photo-1591561954557-26941169b49e", 1800, 1000),
+    image: photo(EDITORIAL[0], 1800, 1000),
     inMegaMenu: true,
     order: 7,
   },
@@ -210,7 +210,7 @@ export const collections: Collection[] = [
     slug: "handbags",
     description:
       "Explore our curated collection of exceptional handbags, from timeless icons to rare and collectible pieces.",
-    image: photo("photo-1584917865442-de89df76afd3", 1800, 1000),
+    image: photo(EDITORIAL[1], 1800, 1000),
     inMegaMenu: false,
     order: 8,
   },
@@ -220,7 +220,7 @@ export const collections: Collection[] = [
     slug: "accessories",
     description:
       "Small leather goods, silk and hardware chosen with the same eye as the bags.",
-    image: photo("photo-1702326626601-74d2e86922b4", 1800, 1000),
+    image: photo(EDITORIAL[2], 1800, 1000),
     inMegaMenu: false,
     order: 9,
   },
@@ -229,7 +229,7 @@ export const collections: Collection[] = [
     name: "Best Sellers",
     slug: "best-sellers",
     description: "The silhouettes our clients return for most often.",
-    image: photo("photo-1705909237050-7a7625b47fac", 1800, 1000),
+    image: photo(EDITORIAL[3], 1800, 1000),
     inMegaMenu: false,
     order: 10,
   },
