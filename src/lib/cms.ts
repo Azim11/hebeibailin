@@ -18,43 +18,63 @@ import { brands, categories, collections } from "@/lib/data/taxonomy";
  * are already `Promise`-returning for that reason.
  */
 
+/**
+ * The seed arrays are static, so the sorted/derived views below are computed
+ * once at module scope rather than on every call. Cloudflare Workers reuse a
+ * warm isolate's module state across requests, so this work runs once per
+ * isolate instead of once per request — the free plan's 10ms CPU budget has
+ * none to spare for re-sorting the same lists on every page.
+ */
+const sortedBrands = [...brands].sort((a, b) => a.order - b.order);
+const featuredBrands = sortedBrands.filter((b) => b.featured);
+const brandBySlug = new Map(brands.map((b) => [b.slug, b]));
+const sortedCollections = [...collections].sort((a, b) => a.order - b.order);
+const collectionBySlug = new Map(collections.map((c) => [c.slug, c]));
+const sortedCategories = [...categories].sort((a, b) => a.order - b.order);
+const productById = new Map(products.map((p) => [p.id, p]));
+const productBySlug = new Map(products.map((p) => [p.slug, p]));
+const catalogueSummaries = toSummaries(products);
+
 export async function getProducts(): Promise<Product[]> {
   return products;
 }
 
+export async function getCatalogueSummaries(): Promise<ProductSummary[]> {
+  return catalogueSummaries;
+}
+
 export async function getProductBySlug(slug: string): Promise<Product | null> {
-  return products.find((p) => p.slug === slug) ?? null;
+  return productBySlug.get(slug) ?? null;
 }
 
 export async function getProductsByIds(ids: string[]): Promise<Product[]> {
-  const index = new Map(products.map((p) => [p.id, p]));
-  return ids.map((id) => index.get(id)).filter((p): p is Product => Boolean(p));
+  return ids.map((id) => productById.get(id)).filter((p): p is Product => Boolean(p));
 }
 
 export async function getBrands(): Promise<Brand[]> {
-  return [...brands].sort((a, b) => a.order - b.order);
+  return sortedBrands;
 }
 
 export async function getFeaturedBrands(): Promise<Brand[]> {
-  return (await getBrands()).filter((b) => b.featured);
+  return featuredBrands;
 }
 
 export async function getBrandBySlug(slug: string): Promise<Brand | null> {
-  return brands.find((b) => b.slug === slug) ?? null;
+  return brandBySlug.get(slug) ?? null;
 }
 
 export async function getCollections(): Promise<Collection[]> {
-  return [...collections].sort((a, b) => a.order - b.order);
+  return sortedCollections;
 }
 
 export async function getCollectionBySlug(
   slug: string,
 ): Promise<Collection | null> {
-  return collections.find((c) => c.slug === slug) ?? null;
+  return collectionBySlug.get(slug) ?? null;
 }
 
 export async function getCategories() {
-  return [...categories].sort((a, b) => a.order - b.order);
+  return sortedCategories;
 }
 
 /** Products belonging to a collection slug, honouring the virtual collections. */

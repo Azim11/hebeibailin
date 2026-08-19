@@ -14,7 +14,7 @@ import { AuthProvider } from "@/store/auth";
 import { ShopProvider } from "@/store/shop";
 import { UIProvider } from "@/store/ui";
 import { CatalogueProvider } from "@/store/catalogue";
-import { getBrands, getCollections, getProducts, toSummaries } from "@/lib/cms";
+import { getBrands, getCatalogueSummaries, getCollections } from "@/lib/cms";
 import { announcements, site } from "@/lib/data/site";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 
@@ -64,16 +64,13 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   // Navigation data is fetched server-side so the mega menu reflects the CMS.
-  const [brands, collections, products] = await Promise.all([
+  const [brands, collections, catalogue] = await Promise.all([
     getBrands(),
     getCollections(),
-    getProducts(),
+    getCatalogueSummaries(),
   ]);
 
   const announcement = announcements.find((a) => a.active) ?? null;
-
-  // Overlays search the full catalogue; summaries keep the payload light.
-  const catalogue = toSummaries(products);
 
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
