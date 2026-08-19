@@ -14,7 +14,7 @@ import { AuthProvider } from "@/store/auth";
 import { ShopProvider } from "@/store/shop";
 import { UIProvider } from "@/store/ui";
 import { CatalogueProvider } from "@/store/catalogue";
-import { getBrands, getCatalogueSummaries, getCollections } from "@/lib/cms";
+import { getCatalogueSummaries, getCollections } from "@/lib/cms";
 import { announcements, site } from "@/lib/data/site";
 import { organizationSchema, websiteSchema } from "@/lib/seo";
 
@@ -64,8 +64,7 @@ export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   // Navigation data is fetched server-side so the mega menu reflects the CMS.
-  const [brands, collections, catalogue] = await Promise.all([
-    getBrands(),
+  const [collections, catalogue] = await Promise.all([
     getCollections(),
     getCatalogueSummaries(),
   ]);
@@ -94,7 +93,7 @@ export default async function RootLayout({
             <ShopProvider>
               <UIProvider>
                 <AnnouncementBar announcement={announcement} />
-                <Header brands={brands} collections={collections} />
+                <Header collections={collections} />
 
                 <main id="main" className="min-h-[60vh] pb-16 lg:pb-0">
                   {children}

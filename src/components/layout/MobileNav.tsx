@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import type { Brand, Collection } from "@/lib/types";
+import type { Collection } from "@/lib/types";
 import { site } from "@/lib/data/site";
 import { shopByLinks } from "@/lib/data/taxonomy";
 import { useUI } from "@/store/ui";
@@ -13,10 +13,8 @@ type Section = { key: string; label: string; links: { label: string; href: strin
 
 /** Full-height slide-in navigation for small screens. */
 export function MobileNav({
-  brands,
   collections,
 }: {
-  brands: Brand[];
   collections: Collection[];
 }) {
   const { mobileNavOpen, closeMobileNav } = useUI();
@@ -24,11 +22,6 @@ export function MobileNav({
 
   const sections: Section[] = [
     { key: "handbags", label: "Handbags", links: shopByLinks },
-    {
-      key: "brands",
-      label: "Brands",
-      links: brands.map((b) => ({ label: b.name, href: `/brands/${b.slug}` })),
-    },
     {
       key: "collections",
       label: "Collections",

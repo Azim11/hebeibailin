@@ -54,10 +54,7 @@ export function RareFinds({ products }: { products: ProductSummary[] }) {
 
               <div className="mt-6 flex items-end justify-between gap-6">
                 <div>
-                  <p className="font-sans text-[0.625rem] tracking-luxe text-taupe uppercase">
-                    {lead.brand}
-                  </p>
-                  <h3 className="mt-2 font-serif text-3xl text-ink">{lead.name}</h3>
+                  <h3 className="font-serif text-3xl text-ink">{lead.name}</h3>
                   <p className="mt-1.5 font-sans text-[0.8125rem] text-stone">
                     {lead.shortDescription}
                   </p>
@@ -89,10 +86,7 @@ export function RareFinds({ products }: { products: ProductSummary[] }) {
                   </div>
 
                   <div className="min-w-0">
-                    <p className="font-sans text-[0.625rem] tracking-luxe text-taupe uppercase">
-                      {product.brand}
-                    </p>
-                    <h3 className="mt-1.5 font-serif text-xl text-ink sm:text-2xl">
+                    <h3 className="font-serif text-xl text-ink sm:text-2xl">
                       {product.name}
                     </h3>
                     <p className="mt-1 font-sans text-[0.75rem] text-stone">

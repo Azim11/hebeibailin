@@ -42,7 +42,7 @@ const faqItems: FAQItem[] = [
     category: "Authenticity & Provenance",
     question: "Are you affiliated with the brands you sell?",
     answer:
-      "Hebei Bailin is an independent curator and reseller of authentic luxury handbags and collectible accessories. We are not affiliated with, sponsored by, or officially connected to Hermès, Chanel, Louis Vuitton, Dior, Goyard, or any other fashion maison. All trademarks, registered logos, and brand names remain the sole property of their respective trademark holders.",
+      "Hebei Bailin is an independent creator and curator of original, logo-free luxury handbags. Our collection is not presented as merchandise from any third-party fashion house.",
   },
   {
     id: "order-1",

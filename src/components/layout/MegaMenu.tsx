@@ -4,14 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import type { Brand, Collection } from "@/lib/types";
+import type { Collection } from "@/lib/types";
 import { shopByLinks } from "@/lib/data/taxonomy";
 
-export type MenuKey = "new" | "handbags" | "brands" | "collections" | "accessories" | "about" | "contact";
+export type MenuKey = "new" | "handbags" | "collections" | "about" | "contact";
 
 type MegaMenuProps = {
   menu: MenuKey;
-  brands: Brand[];
   collections: Collection[];
   onNavigate: () => void;
 };
@@ -88,7 +87,7 @@ function FeatureTile({
   );
 }
 
-export function MegaMenu({ menu, brands, collections, onNavigate }: MegaMenuProps) {
+export function MegaMenu({ menu, collections, onNavigate }: MegaMenuProps) {
   const menuCollections = collections.filter((c) => c.inMegaMenu);
 
   return (
@@ -154,49 +153,6 @@ export function MegaMenu({ menu, brands, collections, onNavigate }: MegaMenuProp
               image={collections[0]?.image ?? ""}
               eyebrow="Just In"
               title="New Arrivals"
-              onNavigate={onNavigate}
-            />
-          </>
-        ) : null}
-
-        {menu === "brands" ? (
-          <>
-            <div className="flex flex-col lg:col-span-2">
-              <ColumnTitle>Maisons</ColumnTitle>
-              <div className="grid grid-cols-2 gap-x-10 gap-y-3.5">
-                {brands.map((brand) => (
-                  <MenuLink
-                    key={brand.slug}
-                    href={`/brands/${brand.slug}`}
-                    onNavigate={onNavigate}
-                  >
-                    {brand.name}
-                  </MenuLink>
-                ))}
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <ColumnTitle>Discover</ColumnTitle>
-              <div className="flex flex-col items-start gap-3.5">
-                <MenuLink href="/brands" onNavigate={onNavigate}>
-                  All Brands
-                </MenuLink>
-                <MenuLink href="/collections/investment-bags" onNavigate={onNavigate}>
-                  Investment Bags
-                </MenuLink>
-                <MenuLink href="/collections/rare-finds" onNavigate={onNavigate}>
-                  Rare Finds
-                </MenuLink>
-                <MenuLink href="/collections/new-arrivals" onNavigate={onNavigate}>
-                  New Arrivals
-                </MenuLink>
-              </div>
-            </div>
-            <FeatureTile
-              href={`/brands/${brands[0]?.slug ?? "hermes"}`}
-              image={brands[0]?.image ?? ""}
-              eyebrow="Maison"
-              title={brands[0]?.name ?? "Hermès"}
               onNavigate={onNavigate}
             />
           </>

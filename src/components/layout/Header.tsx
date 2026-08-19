@@ -5,7 +5,7 @@ import { Heart, Menu, Search, ShoppingBag, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import type { Brand, Collection } from "@/lib/types";
+import type { Collection } from "@/lib/types";
 import { site } from "@/lib/data/site";
 import { useShop } from "@/store/shop";
 import { useUI } from "@/store/ui";
@@ -17,9 +17,7 @@ type NavItem = { key: MenuKey; label: string; href: string; hasMenu: boolean };
 const NAV: NavItem[] = [
   { key: "new", label: "New Arrivals", href: "/collections/new-arrivals", hasMenu: false },
   { key: "handbags", label: "Handbags", href: "/collections/handbags", hasMenu: true },
-  { key: "brands", label: "Brands", href: "/brands", hasMenu: true },
   { key: "collections", label: "Collections", href: "/collections", hasMenu: true },
-  { key: "accessories", label: "Accessories", href: "/collections/accessories", hasMenu: false },
   { key: "about", label: "About", href: "/pages/about", hasMenu: true },
   { key: "contact", label: "Contact", href: "/pages/contact", hasMenu: false },
 ];
@@ -35,10 +33,8 @@ function Counter({ value }: { value: number }) {
 }
 
 export function Header({
-  brands,
   collections,
 }: {
-  brands: Brand[];
   collections: Collection[];
 }) {
   const [openMenu, setOpenMenu] = useState<MenuKey | null>(null);
@@ -185,7 +181,6 @@ export function Header({
             <div onMouseEnter={cancelClose} key={openMenu}>
               <MegaMenu
                 menu={openMenu}
-                brands={brands}
                 collections={collections}
                 onNavigate={() => setOpenMenu(null)}
               />
@@ -194,7 +189,7 @@ export function Header({
         </AnimatePresence>
       </header>
 
-      <MobileNav brands={brands} collections={collections} />
+      <MobileNav collections={collections} />
     </>
   );
 }

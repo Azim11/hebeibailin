@@ -211,21 +211,6 @@ export function CollectionBrowser({
 
   const filterPanel = (
     <>
-      {show("brand") ? (
-        <FilterGroup
-          title="Brand"
-          selected={selection.brand}
-          onToggle={(value) => toggleFacet("brand", value)}
-          options={brands
-            .filter((b) => counts.brand.has(b.slug))
-            .map((b) => ({
-              value: b.slug,
-              label: b.name,
-              count: counts.brand.get(b.slug),
-            }))}
-        />
-      ) : null}
-
       {show("category") ? (
         <FilterGroup
           title="Category"

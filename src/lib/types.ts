@@ -41,7 +41,7 @@ export type Product = {
   brandSlug: string;
   name: string;
   slug: string;
-  /** Silhouette / model family, e.g. "Birkin", "Tote". */
+  /** Silhouette / model family, e.g. "Top Handle", "Tote". */
   category: string;
   categorySlug: string;
   /** Editorial collections this piece belongs to. */

@@ -51,10 +51,7 @@ export function FeaturedCollection({ products }: { products: ProductSummary[] })
                   ) : null}
                 </div>
 
-                <p className="mt-6 font-sans text-[0.625rem] tracking-luxe text-taupe uppercase">
-                  {product.brand}
-                </p>
-                <h3 className="mt-2 font-serif text-2xl leading-snug text-ink">
+                <h3 className="mt-6 font-serif text-2xl leading-snug text-ink">
                   {product.name}
                 </h3>
                 <p className="mt-1.5 font-sans text-[0.8125rem] text-stone">

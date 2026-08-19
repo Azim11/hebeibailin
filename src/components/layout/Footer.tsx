@@ -6,9 +6,7 @@ import { NewsletterForm } from "@/components/home/NewsletterForm";
 const shopLinks = [
   { label: "New Arrivals", href: "/collections/new-arrivals" },
   { label: "Handbags", href: "/collections/handbags" },
-  { label: "Brands", href: "/brands" },
   { label: "Collections", href: "/collections" },
-  { label: "Accessories", href: "/collections/accessories" },
   { label: "Rare Finds", href: "/collections/rare-finds" },
 ];
 
@@ -133,4 +131,3 @@ export function Footer() {
     </footer>
   );
 }
-

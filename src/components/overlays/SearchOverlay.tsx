@@ -10,7 +10,7 @@ import { formatPrice } from "@/lib/format";
 import { useUI } from "@/store/ui";
 import { useCatalogue } from "@/store/catalogue";
 
-const POPULAR = ["Birkin", "Kelly", "Chanel", "Mini Bags", "New Arrivals"];
+const POPULAR = ["Top Handle", "Shoulder Bag", "Tote", "Crossbody", "New Arrivals"];
 
 /** Rank matches so brand and name hits sort above material or tag hits. */
 function rank(list: ProductSummary[], query: string, limit = 6): ProductSummary[] {
@@ -100,8 +100,8 @@ export function SearchOverlay() {
                   type="search"
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Search handbags, brands, styles..."
-                  aria-label="Search handbags, brands, styles"
+                  placeholder="Search handbags, colors, styles..."
+                  aria-label="Search handbags, colors, styles"
                   className="w-full bg-transparent py-1 font-sans text-base text-ink placeholder:text-taupe focus:outline-none sm:text-lg"
                 />
                 {query ? (

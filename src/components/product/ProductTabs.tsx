@@ -100,10 +100,6 @@ export function ProductTabs({ product }: ProductTabsProps) {
           <div className="mx-auto max-w-3xl">
             <dl className="divide-y divide-line border-y border-line text-sm">
               <div className="grid grid-cols-3 py-3.5">
-                <dt className="font-sans text-xs text-taupe uppercase tracking-luxe">Maison / Brand</dt>
-                <dd className="col-span-2 font-medium text-ink">{product.brand}</dd>
-              </div>
-              <div className="grid grid-cols-3 py-3.5">
                 <dt className="font-sans text-xs text-taupe uppercase tracking-luxe">Model Name</dt>
                 <dd className="col-span-2 font-medium text-ink">{product.name}</dd>
               </div>

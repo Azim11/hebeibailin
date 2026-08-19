@@ -687,7 +687,7 @@ export default function AccountPage() {
               <Sparkles className="size-6 text-champagne" />
               <h3 className="mt-4 font-serif text-2xl text-ink">Bespoke Sourcing Request</h3>
               <p className="mt-2 font-sans text-[0.875rem] leading-relaxed text-stone">
-                Looking for a specific Hermès Birkin leather configuration, rare Chanel vintage
+                Looking for a specific leather, color or original silhouette
                 hardware, or limited runway piece? Our international curators will locate it
                 through private archives.
               </p>

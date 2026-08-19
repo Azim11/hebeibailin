@@ -1,6 +1,5 @@
 import { Hero } from "@/components/home/Hero";
 import { FeaturedCollection } from "@/components/home/FeaturedCollection";
-import { BrandGrid } from "@/components/home/BrandGrid";
 import { NewArrivals } from "@/components/home/NewArrivals";
 import { AuthenticitySection } from "@/components/home/AuthenticitySection";
 import { RareFinds } from "@/components/home/RareFinds";
@@ -15,7 +14,6 @@ import { InstagramGrid } from "@/components/home/InstagramGrid";
 import { NewsletterSection } from "@/components/home/NewsletterSection";
 
 import {
-  getFeaturedBrands,
   getFeaturedProducts,
   getNewArrivals,
   getRareFinds,
@@ -24,9 +22,8 @@ import {
 import { BAG_SHOTS, photo } from "@/lib/data/images";
 
 export default async function HomePage() {
-  const [featured, brands, newArrivals, rareFinds] = await Promise.all([
+  const [featured, newArrivals, rareFinds] = await Promise.all([
     getFeaturedProducts(4),
-    getFeaturedBrands(),
     getNewArrivals(12),
     getRareFinds(3),
   ]);
@@ -36,8 +33,6 @@ export default async function HomePage() {
       <Hero image={photo(BAG_SHOTS[0], 2400, 1500)} />
 
       <FeaturedCollection products={toSummaries(featured, 1)} />
-
-      <BrandGrid brands={brands} />
 
       <NewArrivals products={toSummaries(newArrivals)} />
 

@@ -10,8 +10,6 @@ import { ProductCard } from "@/components/product/ProductCard";
 import { MobileQuickBuy } from "@/components/product/MobileQuickBuy";
 import {
   getProductBySlug,
-  getProductsByBrand,
-  getProductsInCollection,
   getProducts,
   toSummaries,
 } from "@/lib/cms";
@@ -32,7 +30,7 @@ export async function generateMetadata(props: ProductPageProps) {
   if (!product) return {};
 
   return pageMetadata({
-    title: `${product.brand} ${product.name}`,
+    title: product.name,
     description: product.description,
     path: `/products/${product.slug}`,
     image: product.images[0]?.url,
@@ -44,16 +42,13 @@ export default async function ProductDetailPage(props: ProductPageProps) {
   const product = await getProductBySlug(slug);
   if (!product) notFound();
 
-  // Fetch related products (same brand or same category)
-  const brandProducts = await getProductsByBrand(product.brandSlug);
-  const relatedProducts = brandProducts
+  const relatedProducts = (await getProducts())
     .filter((p) => p.id !== product.id)
     .slice(0, 4);
 
   const crumbs = [
     { name: "Home", href: "/" },
-    { name: "Brands", href: "/brands" },
-    { name: product.brand, href: `/brands/${product.brandSlug}` },
+    { name: "Handbags", href: "/collections/handbags" },
     { name: product.name, href: `/products/${product.slug}` },
   ];
 
@@ -104,10 +99,10 @@ export default async function ProductDetailPage(props: ProductPageProps) {
                   </p>
                 </div>
                 <h3 className="mt-2 font-serif text-2xl text-ink sm:text-3xl">
-                  Seeking a Specific {product.brand} Silhouette?
+                  Seeking a Specific Silhouette?
                 </h3>
                 <p className="mt-2 font-sans text-xs text-stone leading-relaxed">
-                  Our private client team sources rare Hermès, Chanel, and Dior configurations directly through our worldwide collector network.
+                  Our private client team can help source an original, logo-free silhouette tailored to your preferred color, material and proportions.
                 </p>
               </div>
 
@@ -130,14 +125,14 @@ export default async function ProductDetailPage(props: ProductPageProps) {
                     Curated Collection
                   </p>
                   <h2 className="mt-2 font-serif text-2xl text-ink sm:text-3xl">
-                    More From {product.brand}
+                    More From the Collection
                   </h2>
                 </div>
                 <Link
-                  href={`/brands/${product.brandSlug}`}
+                  href="/collections/handbags"
                   className="hidden font-sans text-[0.6875rem] tracking-luxe text-ink uppercase transition-colors hover:text-champagne sm:block"
                 >
-                  View All {product.brand}
+                  View All Handbags
                 </Link>
               </div>
 

@@ -16,7 +16,7 @@ export const testimonials: Testimonial[] = [
       "The bag was even more beautiful in person. The entire experience felt incredibly personal and professional, from the first message to the moment it arrived.",
     name: "Sample Client",
     country: "United Kingdom",
-    purchasedProduct: "Hermès Kelly 28 Sellier",
+    purchasedProduct: "Forest Structured Satchel",
     placeholder: true,
   },
   {
@@ -25,7 +25,7 @@ export const testimonials: Testimonial[] = [
       "I had been searching for this exact configuration for two years. Their sourcing team found it in a matter of weeks and kept me informed the whole way through.",
     name: "Sample Client",
     country: "Singapore",
-    purchasedProduct: "Hermès Birkin 25",
+    purchasedProduct: "Espresso Structured Top Handle",
     placeholder: true,
   },
   {
@@ -34,7 +34,7 @@ export const testimonials: Testimonial[] = [
       "The condition report was honest to the millimetre. Nothing was oversold, which is rare, and it is the reason I have bought three times since.",
     name: "Sample Client",
     country: "United States",
-    purchasedProduct: "Chanel Classic Flap Medium",
+    purchasedProduct: "Ivory Quilted Shoulder Bag",
     placeholder: true,
   },
   {
@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
       "Consigning was effortless. The valuation was clear, the photography was better than I could have managed, and the piece sold within the month.",
     name: "Sample Client",
     country: "United Arab Emirates",
-    purchasedProduct: "Louis Vuitton Capucines MM",
+    purchasedProduct: "Noir Pebbled Leather Tote",
     placeholder: true,
   },
 ];
@@ -115,10 +115,10 @@ export const showroomImages = [
 ];
 
 export const instagramPosts = [
-  { id: "ig-1", href: "https://instagram.com", caption: "Kelly 28 Sellier in Noir Epsom" },
+  { id: "ig-1", href: "https://instagram.com", caption: "Forest green grained leather" },
   { id: "ig-2", href: "https://instagram.com", caption: "A morning of authentication" },
-  { id: "ig-3", href: "https://instagram.com", caption: "Constance 18, Étoupe" },
-  { id: "ig-4", href: "https://instagram.com", caption: "Vintage Chanel, 1992" },
+  { id: "ig-3", href: "https://instagram.com", caption: "Ivory quilting in soft light" },
+  { id: "ig-4", href: "https://instagram.com", caption: "Burgundy box leather, up close" },
   { id: "ig-5", href: "https://instagram.com", caption: "New arrivals, unboxed" },
   { id: "ig-6", href: "https://instagram.com", caption: "Inside the showroom" },
 ];

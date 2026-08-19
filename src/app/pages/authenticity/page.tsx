@@ -39,7 +39,7 @@ const inspectionPillars = [
     title: "Hardware Metallurgy",
     subtitle: "Alloy Density & Engravings",
     description:
-      "Authentic luxury hardware features solid brass or palladium-plated alloys with precise mass. We inspect engraving depth, laser vs rotary tool kerning, screw threading (such as Hermès flat-head screws), and zipper track resistance.",
+      "Quality luxury hardware uses solid brass or carefully plated alloys with precise mass. We inspect finish consistency, screw threading, clasp alignment and zipper-track resistance.",
   },
   {
     icon: Layers,

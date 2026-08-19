@@ -141,8 +141,7 @@ export default function TermsPage() {
                 <p className="mt-2 text-[0.875rem] text-stone">
                   {site.name} and {site.legalName} are independent curators, authenticators,
                   and resellers of genuine luxury items. We are not an authorized dealer,
-                  distributor, associate, or affiliate of Hermès, Chanel, Louis Vuitton,
-                  Christian Dior, Goyard, Saint Laurent, or any other designer Maison. All brand
+                  distributor, associate, or affiliate of any third-party designer house. All brand
                   names, logos, and trademarks displayed on this website are the sole property
                   of their respective registered owners.
                 </p>

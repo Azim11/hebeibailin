@@ -44,14 +44,11 @@ export function ProductInfo({ product }: ProductInfoProps) {
 
   return (
     <div className="flex flex-col">
-      {/* Brand & Category Link */}
+      {/* Catalogue reference */}
       <div className="flex items-center justify-between">
-        <Link
-          href={`/brands/${product.brandSlug}`}
-          className="font-sans text-[0.6875rem] tracking-luxe-wide text-champagne uppercase transition-colors hover:text-ink"
-        >
-          {product.brand}
-        </Link>
+        <span className="font-sans text-[0.6875rem] tracking-luxe-wide text-champagne uppercase">
+          {product.category}
+        </span>
         <span className="font-sans text-[0.625rem] tracking-luxe text-taupe uppercase">
           SKU: {product.sku}
         </span>

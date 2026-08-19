@@ -132,11 +132,7 @@ export function ProductCard({
 
       {/* Information */}
       <div className="flex flex-1 flex-col pt-4">
-        <p className="font-sans text-[0.625rem] tracking-luxe text-taupe uppercase">
-          {product.brand}
-        </p>
-
-        <h3 className="mt-1.5 font-serif text-[1.0625rem] leading-snug text-ink">
+        <h3 className="font-serif text-[1.0625rem] leading-snug text-ink">
           <Link href={href} className="link-underline">
             {product.name}
           </Link>
