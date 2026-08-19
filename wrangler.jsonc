@@ -9,11 +9,8 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
-  "build": {
-    // Cloudflare Workers Builds runs this before deploying
-    "command": "opennextjs-cloudflare build"
-  },
   "observability": {
     "enabled": true
   }
 }
+
