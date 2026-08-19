@@ -12,7 +12,7 @@ export const site = {
   tagline: "The Art of the Handbag.",
   description:
     "A curated house of exceptional handbags — new, never-worn, and rare pieces selected for craftsmanship, provenance and enduring style.",
-  url: "https://maisonrouviere.example.com",
+  url: "https://hebeibailin.site",
   locale: "en_US",
   currency: "USD" as const,
   email: "bfvt6239@outlook.com",

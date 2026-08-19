@@ -21,6 +21,7 @@ const NAV: NavItem[] = [
   { key: "collections", label: "Collections", href: "/collections", hasMenu: true },
   { key: "accessories", label: "Accessories", href: "/collections/accessories", hasMenu: false },
   { key: "about", label: "About", href: "/pages/about", hasMenu: true },
+  { key: "contact", label: "Contact", href: "/pages/contact", hasMenu: false },
 ];
 
 /** Small superscript count shown on the bag and wishlist icons. */

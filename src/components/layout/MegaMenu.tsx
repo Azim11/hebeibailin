@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 import type { Brand, Collection } from "@/lib/types";
 import { shopByLinks } from "@/lib/data/taxonomy";
 
-export type MenuKey = "new" | "handbags" | "brands" | "collections" | "accessories" | "about";
+export type MenuKey = "new" | "handbags" | "brands" | "collections" | "accessories" | "about" | "contact";
 
 type MegaMenuProps = {
   menu: MenuKey;

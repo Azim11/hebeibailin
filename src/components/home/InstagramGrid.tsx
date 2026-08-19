@@ -14,7 +14,7 @@ export function InstagramGrid({ images }: { images: string[] }) {
     <section className="py-20 lg:py-32">
       <Container size="wide">
         <SectionHeading
-          eyebrow="@maisonrouviere"
+          eyebrow="@hebeibailin"
           title="Follow the Collection"
         />
 
