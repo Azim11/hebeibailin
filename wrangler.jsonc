@@ -2,9 +2,10 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
   "name": "hebeibailin",
-  // Set this to today's date
   "compatibility_date": "2026-08-19",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
@@ -13,4 +14,3 @@
     "enabled": true
   }
 }
-
