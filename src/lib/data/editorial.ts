@@ -92,7 +92,7 @@ export const founder = {
 export const storyChapters = [
   {
     title: "How it began",
-    body: "Maison Rouvière began in a single room above a leather workshop, with a notebook of clients and a habit of asking too many questions about provenance. What started as sourcing for friends became a practice built around one idea: that the story of a bag matters as much as its condition.",
+    body: "Hebei Bailin began in a single room above a leather workshop, with a notebook of clients and a habit of asking too many questions about provenance. What started as sourcing for friends became a practice built around one idea: that the story of a bag matters as much as its condition.",
   },
   {
     title: "Expertise",

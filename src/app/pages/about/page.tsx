@@ -20,7 +20,7 @@ export default function AboutPage() {
         eyebrow="Our Story"
         title="About Us"
         description="A curated house of exceptional handbags, built on craftsmanship, provenance and honest description."
-        image={EDITORIAL[0]}
+        image="/images/about_banner.jpg"
       />
 
       <Container size="narrow" className="py-16 lg:py-24">
@@ -37,6 +37,31 @@ export default function AboutPage() {
           ))}
         </div>
       </Container>
+
+      {/* Atelier & Showroom Showcase */}
+      <section className="border-y border-line bg-bone py-16 lg:py-24">
+        <Container size="wide">
+          <Reveal>
+            <div className="relative aspect-16/9 w-full overflow-hidden rounded-xs bg-warm shadow-xs">
+              <Image
+                src="/images/about_banner.jpg"
+                alt="Hebei Bailin curation studio and atelier"
+                fill
+                sizes="(min-width: 1280px) 1440px, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="mt-6 flex flex-col justify-between gap-2 sm:flex-row sm:items-center">
+              <p className="font-serif text-base tracking-wide text-ink">
+                The Hebei Bailin Curation Studio & Atelier
+              </p>
+              <p className="font-sans text-[0.6875rem] tracking-luxe text-taupe uppercase">
+                Craftsmanship · Authentication · Preservation
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
 
       {/* Founder */}
       <section className="bg-warm py-20 lg:py-32">
