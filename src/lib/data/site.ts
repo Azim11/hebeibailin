@@ -5,10 +5,10 @@ import type { Announcement } from "@/lib/types";
  * see `docs/CMS.md` for the mapping between these keys and admin fields.
  */
 export const site = {
-  name: "Maison Rouvière",
-  shortName: "Rouvière",
+  name: "Hebei Bailin",
+  shortName: "Hebei Bailin",
   /** Rendered as the wordmark in the header and footer. */
-  wordmark: "MAISON ROUVIÈRE",
+  wordmark: "HEBEI BAILIN",
   tagline: "The Art of the Handbag.",
   description:
     "A curated house of exceptional handbags — new, never-worn, and rare pieces selected for craftsmanship, provenance and enduring style.",

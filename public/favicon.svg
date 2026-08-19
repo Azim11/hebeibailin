@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1A17"/>
+      <stop offset="50%" stop-color="#121110"/>
+      <stop offset="100%" stop-color="#0A0908"/>
+    </linearGradient>
+
+    <!-- Gold Foil Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF2DC"/>
+      <stop offset="25%" stop-color="#E8CCA0"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="75%" stop-color="#DFBD7D"/>
+      <stop offset="100%" stop-color="#9C7736"/>
+    </linearGradient>
+
+    <!-- Subtle Border Glow -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5A059" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#DFBD7D" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#9C7736" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Rounded Container -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Luxury Border -->
+  <rect x="24" y="24" width="464" height="464" rx="88" fill="none" stroke="url(#borderGrad)" stroke-width="4"/>
+  
+  <!-- Inner Delicate Border -->
+  <rect x="36" y="36" width="440" height="440" rx="76" fill="none" stroke="url(#borderGrad)" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- Monogram HB (Hebei Bailin) -->
+  <g fill="url(#goldGrad)" style="font-family: 'Cormorant Garamond', 'Didot', 'Bodoni MT', 'Cinzel', 'Playfair Display', Georgia, serif;">
+    <!-- Monogram Text Rendered as Serif Art -->
+    <text 
+      x="50%" 
+      y="54%" 
+      font-size="220" 
+      font-weight="500" 
+      letter-spacing="4" 
+      text-anchor="middle" 
+      dominant-baseline="central"
+    >HB</text>
+  </g>
+
+  <!-- Decorative Underline Accent -->
+  <path d="M 176 380 L 336 380" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="256" cy="380" r="4" fill="url(#goldGrad)"/>
+</svg>
