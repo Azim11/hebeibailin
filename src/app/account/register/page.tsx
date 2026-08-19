@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowRight, Check, Eye, EyeOff, Lock, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Eye, EyeOff, Lock, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { useAuth } from "@/store/auth";
 
@@ -27,17 +27,6 @@ export default function RegisterPage() {
   if (hydrated && user) {
     router.replace("/account");
   }
-
-  const handleAutoFill = () => {
-    const randomId = Math.floor(100 + Math.random() * 900);
-    setFirstName("Éléonore");
-    setLastName("Laurent");
-    setEmail(`eleonore.laurent${randomId}@example.com`);
-    setPhone("+1 (415) 555-0182");
-    setPassword("password123");
-    setConfirmPassword("password123");
-    setError("");
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -93,21 +82,6 @@ export default function RegisterPage() {
               Register to track acquisitions, store verified delivery addresses, and
               receive private collector previews.
             </p>
-          </div>
-
-          {/* Quick Fill Button */}
-          <div className="mt-8 border border-line bg-ivory p-4 flex flex-wrap items-center justify-between gap-3">
-            <div className="flex items-center gap-2 font-sans text-xs text-charcoal">
-              <Sparkles className="size-4 text-champagne shrink-0" />
-              <span>Want to test quickly? Auto-fill sample collector information.</span>
-            </div>
-            <button
-              type="button"
-              onClick={handleAutoFill}
-              className="border border-ink bg-ink px-4 py-2 font-sans text-[0.6875rem] tracking-luxe uppercase text-ivory hover:bg-charcoal transition-colors"
-            >
-              Fill Sample Details
-            </button>
           </div>
 
           {/* Form */}
