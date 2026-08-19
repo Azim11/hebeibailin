@@ -1,5 +1,5 @@
 import type { Product } from "@/lib/types";
-import { BAG_SHOTS, photo } from "./images";
+import { BAG_SHOTS, photo, pick } from "./images";
 
 /**
  * Seed catalogue.
@@ -904,153 +904,52 @@ function slugify(input: string): string {
     .replace(/^-|-$/g, "");
 }
 
-const SILHOUETTE_PHOTO_SETS: Record<string, string[]> = {
+/**
+ * Each silhouette gets a deterministic 4-photo set drawn from the verified
+ * `BAG_SHOTS` pool, seeded so the same silhouette always renders the same
+ * images across a build.
+ */
+const SILHOUETTE_SEEDS: Record<string, number> = {
   // Hermès Birkin
-  "birkin-25": [
-    "/images/hero_luxury_bag.jpg",
-    "photo-1590874103328-eac38a683ce7",
-    "photo-1584917865442-de89df76afd3",
-    "photo-1601924994987-69e26d50dc26",
-  ],
-  "kelly-28": [
-    "photo-1584917865442-de89df76afd3",
-    "/images/hero_luxury_bag.jpg",
-    "photo-1559563458-527698bf5295",
-    "photo-1590874103328-eac38a683ce7",
-  ],
-  "birkin-30": [
-    "photo-1590874103328-eac38a683ce7",
-    "/images/hero_luxury_bag.jpg",
-    "photo-1584917865442-de89df76afd3",
-    "photo-1544816155-12df9643f363",
-  ],
-  "constance-18": [
-    "photo-1509319117193-57bab727e09d",
-    "/images/hero_luxury_bag.jpg",
-    "photo-1590874103328-eac38a683ce7",
-    "photo-1584917865442-de89df76afd3",
-  ],
-  "kelly-pochette": [
-    "photo-1566150905458-1bf1fc113f0d",
-    "photo-1547949003-9792a18a2601",
-    "photo-1590739225287-bd2ea5183db7",
-    "photo-1584917865442-de89df76afd3",
-  ],
-  
+  "birkin-25": 0,
+  "kelly-28": 3,
+  "birkin-30": 6,
+  "constance-18": 9,
+  "kelly-pochette": 12,
+
   // Chanel
-  "classic-flap": [
-    "/images/chanel_classic_black.jpg",
-    "photo-1548036328-c9fa89d128fa",
-    "photo-1559563458-527698bf5295",
-    "photo-1584917865442-de89df76afd3",
-  ],
-  "boy-bag": [
-    "photo-1559563458-527698bf5295",
-    "/images/chanel_classic_black.jpg",
-    "photo-1548036328-c9fa89d128fa",
-    "photo-1584917865442-de89df76afd3",
-  ],
-  "19-flap": [
-    "photo-1594223274512-ad4803739b7c",
-    "photo-1549439602-43ebca2327af",
-    "/images/chanel_classic_black.jpg",
-    "photo-1590739225287-bd2ea5183db7",
-  ],
-  "diana-flap": [
-    "photo-1544816155-12df9643f363",
-    "photo-1566150905458-1bf1fc113f0d",
-    "photo-1512436991641-6745cdb1723f",
-    "photo-1548036328-c9fa89d128fa",
-  ],
-  "mini-rectangular": [
-    "photo-1590739225287-bd2ea5183db7",
-    "photo-1594223274512-ad4803739b7c",
-    "/images/chanel_classic_black.jpg",
-    "photo-1566150905458-1bf1fc113f0d",
-  ],
-  
+  "classic-flap": 15,
+  "boy-bag": 18,
+  "19-flap": 1,
+  "diana-flap": 4,
+  "mini-rectangular": 7,
+
   // Dior
-  "lady-dior": [
-    "/images/dior_lady_latte.jpg",
-    "photo-1594223274512-ad4803739b7c",
-    "photo-1601924994987-69e26d50dc26",
-    "photo-1590739225287-bd2ea5183db7",
-  ],
-  "saddle-bag": [
-    "photo-1512436991641-6745cdb1723f",
-    "photo-1591561954557-26941169b49e",
-    "photo-1594223274512-ad4803739b7c",
-    "photo-1584917865442-de89df76afd3",
-  ],
-  "book-tote": [
-    "photo-1575032617751-6ddec2089882",
-    "photo-1553062407-98eeb64c6a62",
-    "photo-1549439602-43ebca2327af",
-    "/images/goyard_tote_black.jpg",
-  ],
+  "lady-dior": 10,
+  "saddle-bag": 13,
+  "book-tote": 16,
 
   // Louis Vuitton
-  "capucines": [
-    "photo-1584917865442-de89df76afd3",
-    "/images/hero_luxury_bag.jpg",
-    "photo-1559563458-527698bf5295",
-    "photo-1601924994987-69e26d50dc26",
-  ],
-  "neverfull": [
-    "photo-1575032617751-6ddec2089882",
-    "/images/goyard_tote_black.jpg",
-    "photo-1553062407-98eeb64c6a62",
-    "photo-1549439602-43ebca2327af",
-  ],
-  "alma-bb": [
-    "photo-1566150905458-1bf1fc113f0d",
-    "photo-1591561954557-26941169b49e",
-    "photo-1544816155-12df9643f363",
-    "photo-1584917865442-de89df76afd3",
-  ],
-  "petite-malle": [
-    "photo-1553062407-98eeb64c6a62",
-    "photo-1547949003-9792a18a2601",
-    "photo-1594223274512-ad4803739b7c",
-    "photo-1584917865442-de89df76afd3",
-  ],
+  "capucines": 19,
+  "neverfull": 2,
+  "alma-bb": 5,
+  "petite-malle": 8,
 
   // Bottega Veneta
-  "jodie": [
-    "/images/bottega_jodie_brown.jpg",
-    "photo-1590874103328-eac38a683ce7",
-    "photo-1581338834647-b0fb40704e21",
-    "photo-1509319117193-57bab727e09d",
-  ],
-  "andiamo": [
-    "photo-1584917865442-de89df76afd3",
-    "/images/bottega_jodie_brown.jpg",
-    "photo-1590874103328-eac38a683ce7",
-    "photo-1575032617751-6ddec2089882",
-  ],
+  "jodie": 11,
+  "andiamo": 14,
 
   // Goyard
-  "saint-louis": [
-    "/images/goyard_tote_black.jpg",
-    "photo-1575032617751-6ddec2089882",
-    "photo-1549439602-43ebca2327af",
-    "photo-1553062407-98eeb64c6a62",
-  ],
+  "saint-louis": 17,
 
   // Celine & Others
-  "triomphe": [
-    "photo-1590874103328-eac38a683ce7",
-    "photo-1509319117193-57bab727e09d",
-    "photo-1601924994987-69e26d50dc26",
-    "photo-1584917865442-de89df76afd3",
-  ],
-  "puzzle": [
-    "photo-1601924994987-69e26d50dc26",
-    "photo-1509319117193-57bab727e09d",
-    "photo-1581338834647-b0fb40704e21",
-    "photo-1590874103328-eac38a683ce7",
-  ],
+  "triomphe": 20,
+  "puzzle": 1,
 };
+
+const SILHOUETTE_PHOTO_SETS: Record<string, string[]> = Object.fromEntries(
+  Object.entries(SILHOUETTE_SEEDS).map(([key, seed]) => [key, pick(BAG_SHOTS, seed, 4)])
+);
 
 /**
  * Expand the compact seed rows into full `Product` records.

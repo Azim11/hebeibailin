@@ -115,7 +115,7 @@ export const brands: Brand[] = [
     tagline: "Celine, Loewe, Saint Laurent and beyond.",
     description:
       "A rotating selection from houses we admire — acquired when the piece, the condition and the provenance are right.",
-    image: photo("photo-1509319117193-57bab727e09d", 1200, 1500),
+    image: photo("photo-1548036328-c9fa89d128fa", 1200, 1500),
     featured: false,
     order: 10,
   },
@@ -171,7 +171,7 @@ export const collections: Collection[] = [
     slug: "vintage",
     description:
       "Pieces from earlier decades, selected for character as much as condition.",
-    image: photo("photo-1544816155-12df9643f363", 1800, 1000),
+    image: photo("photo-1637759292654-a12cb2be085e", 1800, 1000),
     inMegaMenu: true,
     order: 4,
   },
@@ -220,7 +220,7 @@ export const collections: Collection[] = [
     slug: "accessories",
     description:
       "Small leather goods, silk and hardware chosen with the same eye as the bags.",
-    image: photo("photo-1563178406-4cdc2923acbc", 1800, 1000),
+    image: photo("photo-1702326626601-74d2e86922b4", 1800, 1000),
     inMegaMenu: false,
     order: 9,
   },
@@ -229,7 +229,7 @@ export const collections: Collection[] = [
     name: "Best Sellers",
     slug: "best-sellers",
     description: "The silhouettes our clients return for most often.",
-    image: photo("photo-1601924994987-69e26d50dc26", 1800, 1000),
+    image: photo("photo-1705909237050-7a7625b47fac", 1800, 1000),
     inMegaMenu: false,
     order: 10,
   },

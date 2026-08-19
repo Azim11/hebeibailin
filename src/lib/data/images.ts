@@ -18,34 +18,34 @@ export function photo(id: string, width = 1400, height?: number): string {
   return `${CDN}/${id}?auto=format&q=80&w=${width}${crop}`;
 }
 
-/** Handbag / accessory still-life frames used for product imagery. */
+/**
+ * Handbag / accessory still-life frames used for product imagery.
+ * Every Unsplash id below has been opened and confirmed to show an actual
+ * handbag — do not add an id here without viewing the photo first, since
+ * Unsplash ids that merely resolve (HTTP 200) are not necessarily on-subject.
+ */
 export const BAG_SHOTS = [
   "/images/hero_luxury_bag.jpg", // Generated Tan Top-Handle Luxury Handbag
   "/images/chanel_classic_black.jpg", // Generated Chanel Black Quilted Flap Handbag
   "/images/dior_lady_latte.jpg", // Generated Dior Lady Latte Quilted Handbag
   "/images/bottega_jodie_brown.jpg", // Generated Bottega Jodie Woven Leather Handbag
   "/images/goyard_tote_black.jpg", // Generated Goyard Black Chevron Tote Bag
-  "photo-1584917865442-de89df76afd3", // Black luxury leather top-handle handbag
-  "photo-1548036328-c9fa89d128fa", // Black quilted leather gold chain flap handbag
-  "photo-1590874103328-eac38a683ce7", // Cognac tan structured top-handle handbag
-  "photo-1594223274512-ad4803739b7c", // Ivory luxury leather shoulder handbag
-  "photo-1566150905458-1bf1fc113f0d", // Crimson red leather luxury handbag
-  "photo-1591561954557-26941169b49e", // Deep emerald green top-handle handbag
-  "photo-1575032617751-6ddec2089882", // Cognac leather shopper tote handbag
-  "photo-1601924994987-69e26d50dc26", // Minimal beige leather shoulder handbag
-  "photo-1559563458-527698bf5295", // Black leather handbag on marble
-  "photo-1581338834647-b0fb40704e21", // Designer handbag on marble pedestal
-  "photo-1544816155-12df9643f363", // Burgundy luxury leather top-handle handbag
-  "photo-1598532163257-ae3c6b2524b6", // Minimalist white leather shoulder handbag
-  "photo-1547949003-9792a18a2601", // Black leather luxury clutch handbag
-  "photo-1590739225287-bd2ea5183db7", // Powder pink luxury handbag
-  "photo-1512436991641-6745cdb1723f", // Structured saddle leather handbag
-  "photo-1553062407-98eeb64c6a62", // Monogrammed luxury canvas handbag
-  "photo-1549439602-43ebca2327af", // White luxury leather tote handbag
-  "photo-1605733513597-a8f8341084e6", // Rich tan leather travel duffle handbag
-  "photo-1523170335258-f5ed11844a49", // Gold hardware lock on luxury handbag
-  "photo-1600950207944-0d63e8edbc3f", // Turn-lock clasp on luxury leather handbag
-  "photo-1563178406-4cdc2923acbc", // Metallic clasp detail on luxury handbag
+  "photo-1584917865442-de89df76afd3", // Orange top-handle handbag in boutique window
+  "photo-1548036328-c9fa89d128fa", // Black quilted leather gold-chain flap handbag (Gucci Marmont)
+  "photo-1590874103328-eac38a683ce7", // Tan woven leather top-handle handbag in boutique window
+  "photo-1594223274512-ad4803739b7c", // Teal leather top-handle handbag
+  "photo-1566150905458-1bf1fc113f0d", // Pink chevron-quilted chain clutch
+  "photo-1591561954557-26941169b49e", // Floral-print leather top-handle handbag
+  "photo-1575032617751-6ddec2089882", // Burgundy croc-embossed crossbody handbag
+  "photo-1598532163257-ae3c6b2524b6", // Woven tan leather tote with chain handle
+  "photo-1559563458-527698bf5295", // Grey chain-strap handbag styled on a vanity
+  "photo-1605733513597-a8f8341084e6", // Grey leather satchel with top handle
+  "photo-1705909237050-7a7625b47fac", // Black leather boxy handbag
+  "photo-1637759292654-a12cb2be085e", // Cognac leather handbag handle detail
+  "photo-1691480150204-66dd1eb77391", // Cognac leather structured satchel
+  "photo-1640901555383-7335ec5a6476", // Yellow croc-embossed handbag
+  "photo-1702326626601-74d2e86922b4", // Black leather bucket bag hardware detail
+  "photo-1664187284276-2f3254cdc7dc", // Black leather handbag on a sunlit table
 ] as const;
 
 /** Wide editorial frames for heroes, banners and collection headers — all featuring luxury handbags. */
@@ -55,39 +55,31 @@ export const EDITORIAL = [
   "/images/dior_lady_latte.jpg", // Generated Dior Lady Latte Handbag
   "/images/bottega_jodie_brown.jpg", // Generated Bottega Jodie Woven Handbag
   "/images/goyard_tote_black.jpg", // Generated Goyard Chevron Tote
-  "photo-1590874103328-eac38a683ce7", // Cognac tan Hermès style top-handle luxury handbag
-  "photo-1548036328-c9fa89d128fa", // Black quilted luxury flap handbag
-  "photo-1584917865442-de89df76afd3", // Minimal luxury leather structured handbag
-  "photo-1509631179647-0177331693ae", // Trench coat editorial model carrying luxury top-handle handbag
-  "photo-1490481651871-ab68de25d43d", // Parisian street style editorial model carrying luxury handbag
-  "photo-1594223274512-ad4803739b7c", // Ivory luxury designer shoulder handbag
-  "photo-1575032617751-6ddec2089882", // Cognac leather tote bag display frame
-  "photo-1516762689617-e1cffcef479d", // Runway model carrying black leather luxury handbag
-  "photo-1566150905458-1bf1fc113f0d", // Crimson red luxury leather handbag
-  "photo-1591561954557-26941169b49e", // Emerald green luxury top-handle handbag
-  "photo-1581338834647-b0fb40704e21", // Luxury handbag on marble display pedestal
+  "photo-1589731119540-c4586781dae1", // Editorial model carrying a Christian Dior Lady Dior bag
+  "photo-1506152983158-b4a74a01c721", // Styled white leather handbag with sunglasses
+  "photo-1524498250077-390f9e378fc0", // Woman carrying a teal leather handbag
+  "photo-1559127452-9328c6b697bd", // Model in tailored black suit holding an orange croc clutch
+  "photo-1649544284889-2c30c3267013", // Burgundy croc top-handle handbag on pink stairs
+  "photo-1584917865442-de89df76afd3", // Orange top-handle handbag in boutique window
+  "photo-1590874103328-eac38a683ce7", // Tan woven leather top-handle handbag in boutique window
+  "photo-1591561954557-26941169b49e", // Floral-print leather top-handle handbag
 ] as const;
 
-/** Handbag display pedestals, boutique handbag cases and consultation setups. */
+/** Boutique interiors, display cases and showroom consultation setups. */
 export const INTERIORS = [
-  "/images/hero_luxury_bag.jpg", // Generated Tan Luxury Handbag Showcase
-  "/images/dior_lady_latte.jpg", // Generated Dior Handbag Salon Display
-  "/images/bottega_jodie_brown.jpg", // Generated Woven Handbag Display
-  "photo-1581338834647-b0fb40704e21", // Luxury handbag on marble pedestal
-  "photo-1575032617751-6ddec2089882", // Luxury handbag display shelf
+  "photo-1769981653696-5ce5a59263bf", // Luxury boutique clothing display (Celine)
+  "photo-1764512680324-048f158cab2b", // Luxury boutique glass display cases
+  "photo-1775021723698-b9afeaa084d1", // Jewelry and accessory display shelf
+  "photo-1774110073583-2475ab5ed8b2", // Luxury boutique window display (Bulgari)
+  "photo-1782834294716-8e28c18bdba6", // Marble staircase inside a luxury store
 ] as const;
 
-/** Curators and models presenting/styling luxury handbags. */
+/** Curators, specialists and clients presenting/styling luxury handbags. */
 export const PORTRAITS = [
-  "photo-1509631179647-0177331693ae", // Curator holding top-handle luxury handbag
-  "photo-1490481651871-ab68de25d43d", // Client advisor carrying luxury handbag
-  "photo-1516762689617-e1cffcef479d", // Specialist carrying sleek black luxury handbag
-  "photo-1509631179647-0177331693ae", // Head of curation carrying luxury handbag
-  "photo-1490481651871-ab68de25d43d", // Master authenticator with handbag
-  "photo-1516762689617-e1cffcef479d", // Concierge director with handbag
-  "photo-1509631179647-0177331693ae", // Luxury curator with handbag
-  "photo-1490481651871-ab68de25d43d", // Leather craftsman with handbag
-  "photo-1516762689617-e1cffcef479d", // Valuation specialist with handbag
+  "photo-1604904612715-47bf9d9bc670", // Polished professional portrait, grey blazer
+  "photo-1581065178047-8ee15951ede6", // Polished professional portrait, black blazer
+  "photo-1616065297556-f05bc00c9a3e", // Polished professional portrait, black blazer
+  "photo-1563132337-f159f484226c", // Polished professional portrait, orange blazer
 ] as const;
 
 /** Deterministically pick `count` entries from a pool, starting at `seed`. */
