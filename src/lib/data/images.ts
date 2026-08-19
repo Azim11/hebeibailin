@@ -9,8 +9,11 @@
 
 const CDN = "https://images.unsplash.com";
 
-/** Build a sized, cropped CDN url for a stock photo id. */
+/** Build a sized, cropped CDN url for a photo id, or return local public paths directly. */
 export function photo(id: string, width = 1400, height?: number): string {
+  if (id.startsWith("/")) {
+    return id;
+  }
   const crop = height ? `&h=${height}&fit=crop` : "&fit=max";
   return `${CDN}/${id}?auto=format&q=80&w=${width}${crop}`;
 }
