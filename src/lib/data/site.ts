@@ -15,7 +15,18 @@ export const site = {
   url: "https://maisonrouviere.example.com",
   locale: "en_US",
   currency: "USD" as const,
-  email: "clients@maisonrouviere.example.com",
+  email: "bfvt6239@outlook.com",
+  phone: "+1 2016443628",
+  /** Registered legal entity, shown on the About and Contact pages. */
+  legalName: "河北佰霖商贸有限公司",
+  /** Registered business address — real and verified, used for legal/contact display. */
+  address: {
+    lines: [
+      "China (Hebei) Pilot Free Trade Zone Beijing Daxing International Airport Economic Zone Hangyi Road Free Trade Zone Science and Technology Innovation Base 14353",
+      "Daxing District, Hebei, 110115",
+      "China",
+    ],
+  },
   /**
    * No public street address is published: the showroom is by appointment and
    * the address is shared on confirmation. Do not add a physical address here
