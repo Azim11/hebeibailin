@@ -177,13 +177,6 @@ export function MobileNav({
                 >
                   Wishlist
                 </Link>
-                <Link
-                  href="/compare"
-                  onClick={closeMobileNav}
-                  className="font-sans text-[0.8125rem] text-stone"
-                >
-                  Compare
-                </Link>
               </div>
             </div>
           </motion.nav>
