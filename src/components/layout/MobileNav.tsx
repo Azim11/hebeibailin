@@ -48,6 +48,17 @@ export function MobileNav({
         { label: "Contact", href: "/pages/contact" },
       ],
     },
+    {
+      key: "care",
+      label: "Customer Care",
+      links: [
+        { label: "Shipping & Delivery", href: "/pages/shipping" },
+        { label: "Returns & Exchanges", href: "/pages/returns" },
+        { label: "FAQ", href: "/pages/faq" },
+        { label: "Privacy Policy", href: "/pages/privacy" },
+        { label: "Terms & Conditions", href: "/pages/terms" },
+      ],
+    },
   ];
 
   return (
