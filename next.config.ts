@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
       { source: "/shipping", destination: "/pages/shipping", permanent: true },
       { source: "/about", destination: "/pages/about", permanent: true },
       { source: "/contact", destination: "/pages/contact", permanent: true },
+      { source: "/authenticity", destination: "/pages/authenticity", permanent: true },
       { source: "/order-confirmation", destination: "/checkout/success", permanent: false },
     ];
   },

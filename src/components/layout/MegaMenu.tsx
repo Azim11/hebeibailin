@@ -187,8 +187,8 @@ export function MegaMenu({ menu, brands, collections, onNavigate }: MegaMenuProp
                 <MenuLink href="/collections/rare-finds" onNavigate={onNavigate}>
                   Rare Finds
                 </MenuLink>
-                <MenuLink href="/pages/sourcing" onNavigate={onNavigate}>
-                  Request a Bag
+                <MenuLink href="/collections/new-arrivals" onNavigate={onNavigate}>
+                  New Arrivals
                 </MenuLink>
               </div>
             </div>
@@ -219,16 +219,16 @@ export function MegaMenu({ menu, brands, collections, onNavigate }: MegaMenuProp
               </div>
             </div>
             <div className="flex flex-col">
-              <ColumnTitle>The House</ColumnTitle>
+              <ColumnTitle>Featured</ColumnTitle>
               <div className="flex flex-col items-start gap-3.5">
-                <MenuLink href="/pages/authenticity" onNavigate={onNavigate}>
-                  Authentication
+                <MenuLink href="/collections/new-arrivals" onNavigate={onNavigate}>
+                  New Arrivals
                 </MenuLink>
-                <MenuLink href="/pages/sourcing" onNavigate={onNavigate}>
-                  Bag Sourcing
+                <MenuLink href="/collections/investment-bags" onNavigate={onNavigate}>
+                  Investment Bags
                 </MenuLink>
-                <MenuLink href="/pages/appointments" onNavigate={onNavigate}>
-                  Appointments
+                <MenuLink href="/collections/rare-finds" onNavigate={onNavigate}>
+                  Rare Finds
                 </MenuLink>
               </div>
             </div>
@@ -250,39 +250,33 @@ export function MegaMenu({ menu, brands, collections, onNavigate }: MegaMenuProp
                 <MenuLink href="/pages/about" onNavigate={onNavigate}>
                   Our Story
                 </MenuLink>
-                <MenuLink href="/pages/authenticity" onNavigate={onNavigate}>
-                  Authentication
-                </MenuLink>
-                <MenuLink href="/pages/appointments" onNavigate={onNavigate}>
-                  Showroom &amp; Appointments
-                </MenuLink>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <ColumnTitle>Services</ColumnTitle>
-              <div className="flex flex-col items-start gap-3.5">
-                <MenuLink href="/pages/sourcing" onNavigate={onNavigate}>
-                  Bag Sourcing
-                </MenuLink>
-                <MenuLink href="/pages/sell" onNavigate={onNavigate}>
-                  Sell or Consign
-                </MenuLink>
                 <MenuLink href="/pages/contact" onNavigate={onNavigate}>
                   Contact Concierge
                 </MenuLink>
               </div>
             </div>
             <div className="flex flex-col">
-              <ColumnTitle>Client Care</ColumnTitle>
+              <ColumnTitle>Customer Care</ColumnTitle>
               <div className="flex flex-col items-start gap-3.5">
                 <MenuLink href="/pages/shipping" onNavigate={onNavigate}>
-                  Shipping
+                  Shipping &amp; Delivery
                 </MenuLink>
                 <MenuLink href="/pages/returns" onNavigate={onNavigate}>
-                  Returns
+                  Returns &amp; Exchanges
                 </MenuLink>
                 <MenuLink href="/pages/faq" onNavigate={onNavigate}>
                   FAQ
+                </MenuLink>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <ColumnTitle>Legal &amp; Trust</ColumnTitle>
+              <div className="flex flex-col items-start gap-3.5">
+                <MenuLink href="/pages/privacy" onNavigate={onNavigate}>
+                  Privacy Policy
+                </MenuLink>
+                <MenuLink href="/pages/terms" onNavigate={onNavigate}>
+                  Terms &amp; Conditions
                 </MenuLink>
               </div>
             </div>

@@ -41,11 +41,7 @@ export function MobileNav({
       label: "About",
       links: [
         { label: "Our Story", href: "/pages/about" },
-        { label: "Authentication", href: "/pages/authenticity" },
-        { label: "Bag Sourcing", href: "/pages/sourcing" },
-        { label: "Sell or Consign", href: "/pages/sell" },
-        { label: "Appointments", href: "/pages/appointments" },
-        { label: "Contact", href: "/pages/contact" },
+        { label: "Contact Concierge", href: "/pages/contact" },
       ],
     },
     {
