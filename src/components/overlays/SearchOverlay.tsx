@@ -187,14 +187,6 @@ export function SearchOverlay() {
                       ))}
                     </ul>
 
-                    <Link
-                      href={`/search?q=${encodeURIComponent(trimmed)}`}
-                      onClick={closeSearch}
-                      className="mt-8 inline-flex items-center gap-2 font-sans text-[0.6875rem] tracking-luxe text-ink uppercase"
-                    >
-                      View all results
-                      <ArrowRight className="size-3.5" aria-hidden />
-                    </Link>
                   </>
                 ) : (
                   <div className="py-12 text-center">
@@ -205,11 +197,11 @@ export function SearchOverlay() {
                       Our sourcing team can look for it on your behalf.
                     </p>
                     <Link
-                      href="/pages/sourcing"
+                      href="/pages/contact"
                       onClick={closeSearch}
                       className="mt-6 inline-flex items-center gap-2 font-sans text-[0.6875rem] tracking-luxe text-ink uppercase"
                     >
-                      Request a bag
+                      Contact us
                       <ArrowRight className="size-3.5" aria-hidden />
                     </Link>
                   </div>

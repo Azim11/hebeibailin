@@ -210,7 +210,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
             WhatsApp Specialist
           </a>
           <Link
-            href="/pages/appointments"
+            href="/pages/contact"
             className="inline-flex items-center gap-2 border border-line-strong px-4 py-2 font-sans text-[0.625rem] tracking-luxe text-charcoal uppercase transition-colors hover:border-ink hover:text-ink"
           >
             Book Appointment

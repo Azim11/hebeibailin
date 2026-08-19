@@ -107,7 +107,7 @@ export default async function ProductDetailPage(props: ProductPageProps) {
               </div>
 
               <Link
-                href="/pages/sourcing"
+                href="/pages/contact"
                 className="inline-flex h-12 items-center gap-2 border border-ink bg-ink px-8 font-sans text-[0.6875rem] tracking-luxe text-ivory uppercase transition-colors hover:bg-transparent hover:text-ink whitespace-nowrap"
               >
                 Request a Custom Piece

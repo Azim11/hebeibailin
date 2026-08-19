@@ -7,7 +7,6 @@ const shopLinks = [
   { label: "New Arrivals", href: "/collections/new-arrivals" },
   { label: "Handbags", href: "/collections/handbags" },
   { label: "Collections", href: "/collections" },
-  { label: "Rare Finds", href: "/collections/rare-finds" },
 ];
 
 const customerCareLinks = [

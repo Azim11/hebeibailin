@@ -147,14 +147,6 @@ export function MobileNav({
                 );
               })}
 
-              <Link
-                href="/collections/accessories"
-                onClick={closeMobileNav}
-                className="block border-b border-line py-4 font-sans text-[0.75rem] tracking-luxe text-ink uppercase"
-              >
-                Accessories
-              </Link>
-
               <div className="mt-8 flex flex-col gap-3.5">
                 <Link
                   href="/account"

@@ -1,19 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import type { ProductSummary } from "@/lib/types";
 import { formatPrice } from "@/lib/format";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-
-const CATEGORIES = [
-  { label: "Limited Edition", href: "/collections/limited-edition" },
-  { label: "Vintage", href: "/collections/vintage" },
-  { label: "Special Order", href: "/collections/rare-finds?tag=special-order" },
-  { label: "Collector's Pieces", href: "/collections/rare-finds" },
-  { label: "Hard-to-Find", href: "/collections/rare-finds" },
-];
 
 /**
  * Editorial rare-finds row: one tall lead image with two supporting pieces,
@@ -32,7 +23,6 @@ export function RareFinds({ products }: { products: ProductSummary[] }) {
           eyebrow="For Collectors"
           title="Rare Finds"
           description="Exceptional pieces for collectors who appreciate the extraordinary."
-          link={{ label: "View All", href: "/collections/rare-finds" }}
           align="left"
         />
 
@@ -100,28 +90,6 @@ export function RareFinds({ products }: { products: ProductSummary[] }) {
               </Reveal>
             ))}
 
-            {/* Category rail */}
-            <Reveal delay={0.3} className="mt-2 border-t border-line pt-8">
-              <p className="font-sans text-[0.625rem] tracking-luxe-wide text-taupe uppercase">
-                Browse Rare
-              </p>
-              <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-3">
-                {CATEGORIES.map((category) => (
-                  <li key={category.label}>
-                    <Link
-                      href={category.href}
-                      className="group inline-flex items-center gap-1.5 font-sans text-[0.8125rem] text-charcoal transition-colors hover:text-ink"
-                    >
-                      {category.label}
-                      <ArrowRight
-                        className="size-3 text-taupe transition-transform duration-500 group-hover:translate-x-1"
-                        aria-hidden
-                      />
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
           </div>
         </div>
       </Container>

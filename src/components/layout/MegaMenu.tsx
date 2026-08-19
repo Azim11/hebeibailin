@@ -180,19 +180,16 @@ export function MegaMenu({ menu, collections, onNavigate }: MegaMenuProps) {
                 <MenuLink href="/collections/new-arrivals" onNavigate={onNavigate}>
                   New Arrivals
                 </MenuLink>
-                <MenuLink href="/collections/investment-bags" onNavigate={onNavigate}>
-                  Investment Bags
-                </MenuLink>
-                <MenuLink href="/collections/rare-finds" onNavigate={onNavigate}>
-                  Rare Finds
+                <MenuLink href="/collections/best-sellers" onNavigate={onNavigate}>
+                  Best Sellers
                 </MenuLink>
               </div>
             </div>
             <FeatureTile
-              href="/collections/rare-finds"
+              href="/collections/everyday-luxury"
               image={menuCollections[1]?.image ?? ""}
-              eyebrow="For Collectors"
-              title="Rare Finds"
+              eyebrow="Designed for Daily Life"
+              title="Everyday Luxury"
               onNavigate={onNavigate}
             />
           </>

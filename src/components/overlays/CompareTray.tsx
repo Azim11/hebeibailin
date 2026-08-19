@@ -73,12 +73,6 @@ export function CompareTray() {
               Clear
             </button>
 
-            <Link
-              href="/compare"
-              className="flex h-10 shrink-0 items-center border border-ink bg-ink px-5 font-sans text-[0.625rem] tracking-luxe text-ivory uppercase transition-colors duration-500 hover:bg-transparent hover:text-ink"
-            >
-              Compare
-            </Link>
           </div>
         </motion.div>
       ) : null}

@@ -40,7 +40,7 @@ export function ConciergeSection({ image }: { image: string }) {
               </ul>
 
               <Link
-                href="/pages/sourcing"
+                href="/pages/contact"
                 className="mt-10 inline-flex h-14 items-center border border-ink bg-ink px-10 font-sans text-[0.6875rem] tracking-luxe text-ivory uppercase transition-colors duration-500 hover:bg-transparent hover:text-ink"
               >
                 Request a Bag

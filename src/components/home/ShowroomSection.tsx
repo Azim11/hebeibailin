@@ -92,13 +92,13 @@ export function ShowroomSection() {
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/pages/appointments"
+                href="/pages/contact"
                 className="flex h-14 items-center justify-center border border-ink bg-ink px-9 font-sans text-[0.6875rem] tracking-luxe text-ivory uppercase transition-colors duration-500 hover:bg-transparent hover:text-ink"
               >
                 Book an Appointment
               </Link>
               <Link
-                href="/pages/appointments?type=virtual"
+                href="/pages/contact"
                 className="flex h-14 items-center justify-center border border-line-strong px-9 font-sans text-[0.6875rem] tracking-luxe text-ink uppercase transition-colors duration-500 hover:border-ink"
               >
                 Virtual Appointment
