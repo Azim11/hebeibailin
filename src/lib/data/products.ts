@@ -906,40 +906,150 @@ function slugify(input: string): string {
 
 const SILHOUETTE_PHOTO_SETS: Record<string, string[]> = {
   // Hermès Birkin
-  "birkin-25": ["/images/hero_luxury_bag.jpg", "photo-1600950207944-0d63e8edbc3f", "photo-1584917865442-de89df76afd3", "photo-1509631179647-0177331693ae"],
-  "kelly-28": ["photo-1584917865442-de89df76afd3", "photo-1523170335258-f5ed11844a49", "photo-1559563458-527698bf5295", "photo-1516762689617-e1cffcef479d"],
-  "birkin-30": ["photo-1573855619003-97b4799dcd8b", "photo-1614179689702-355944cd0918", "/images/hero_luxury_bag.jpg", "photo-1563178406-4cdc2923acbc"],
-  "constance-18": ["photo-1509319117193-57bab727e09d", "photo-1600950207944-0d63e8edbc3f", "photo-1594223274512-ad4803739b7c", "photo-1490481651871-ab68de25d43d"],
-  "kelly-pochette": ["photo-1566150905458-1bf1fc113f0d", "photo-1563178406-4cdc2923acbc", "photo-1547949003-9792a18a2601", "photo-1515886657613-9f3515b0c78f"],
+  "birkin-25": [
+    "/images/hero_luxury_bag.jpg",
+    "photo-1590874103328-eac38a683ce7",
+    "photo-1584917865442-de89df76afd3",
+    "photo-1601924994987-69e26d50dc26",
+  ],
+  "kelly-28": [
+    "photo-1584917865442-de89df76afd3",
+    "/images/hero_luxury_bag.jpg",
+    "photo-1559563458-527698bf5295",
+    "photo-1590874103328-eac38a683ce7",
+  ],
+  "birkin-30": [
+    "photo-1590874103328-eac38a683ce7",
+    "/images/hero_luxury_bag.jpg",
+    "photo-1584917865442-de89df76afd3",
+    "photo-1544816155-12df9643f363",
+  ],
+  "constance-18": [
+    "photo-1509319117193-57bab727e09d",
+    "/images/hero_luxury_bag.jpg",
+    "photo-1590874103328-eac38a683ce7",
+    "photo-1584917865442-de89df76afd3",
+  ],
+  "kelly-pochette": [
+    "photo-1566150905458-1bf1fc113f0d",
+    "photo-1547949003-9792a18a2601",
+    "photo-1590739225287-bd2ea5183db7",
+    "photo-1584917865442-de89df76afd3",
+  ],
   
   // Chanel
-  "classic-flap": ["/images/chanel_classic_black.jpg", "photo-1517254797898-04edd251bfb3", "photo-1559563458-527698bf5295", "photo-1490481651871-ab68de25d43d"],
-  "boy-bag": ["photo-1559563458-527698bf5295", "photo-1517254797898-04edd251bfb3", "/images/chanel_classic_black.jpg", "photo-1515886657613-9f3515b0c78f"],
-  "19-flap": ["photo-1594223274512-ad4803739b7c", "photo-1549439602-43ebca2327af", "photo-1517254797898-04edd251bfb3", "photo-1509631179647-0177331693ae"],
-  "diana-flap": ["photo-1544816155-12df9643f363", "photo-1563178406-4cdc2923acbc", "photo-1512436991641-6745cdb1723f", "photo-1469334031218-e382a71b716b"],
-  "mini-rectangular": ["photo-1590739225287-bd2ea5183db7", "photo-1563178406-4cdc2923acbc", "photo-1594223274512-ad4803739b7c", "photo-1515886657613-9f3515b0c78f"],
+  "classic-flap": [
+    "/images/chanel_classic_black.jpg",
+    "photo-1548036328-c9fa89d128fa",
+    "photo-1559563458-527698bf5295",
+    "photo-1584917865442-de89df76afd3",
+  ],
+  "boy-bag": [
+    "photo-1559563458-527698bf5295",
+    "/images/chanel_classic_black.jpg",
+    "photo-1548036328-c9fa89d128fa",
+    "photo-1584917865442-de89df76afd3",
+  ],
+  "19-flap": [
+    "photo-1594223274512-ad4803739b7c",
+    "photo-1549439602-43ebca2327af",
+    "/images/chanel_classic_black.jpg",
+    "photo-1590739225287-bd2ea5183db7",
+  ],
+  "diana-flap": [
+    "photo-1544816155-12df9643f363",
+    "photo-1566150905458-1bf1fc113f0d",
+    "photo-1512436991641-6745cdb1723f",
+    "photo-1548036328-c9fa89d128fa",
+  ],
+  "mini-rectangular": [
+    "photo-1590739225287-bd2ea5183db7",
+    "photo-1594223274512-ad4803739b7c",
+    "/images/chanel_classic_black.jpg",
+    "photo-1566150905458-1bf1fc113f0d",
+  ],
   
   // Dior
-  "lady-dior": ["/images/dior_lady_latte.jpg", "photo-1563178406-4cdc2923acbc", "photo-1601924994987-69e26d50dc26", "photo-1509631179647-0177331693ae"],
-  "saddle-bag": ["photo-1512436991641-6745cdb1723f", "photo-1591561954557-26941169b49e", "photo-1563178406-4cdc2923acbc", "photo-1490481651871-ab68de25d43d"],
-  "book-tote": ["photo-1575032617751-6ddec2089882", "photo-1553062407-98eeb64c6a62", "photo-1549439602-43ebca2327af", "photo-1483985988355-763728e1935b"],
+  "lady-dior": [
+    "/images/dior_lady_latte.jpg",
+    "photo-1594223274512-ad4803739b7c",
+    "photo-1601924994987-69e26d50dc26",
+    "photo-1590739225287-bd2ea5183db7",
+  ],
+  "saddle-bag": [
+    "photo-1512436991641-6745cdb1723f",
+    "photo-1591561954557-26941169b49e",
+    "photo-1594223274512-ad4803739b7c",
+    "photo-1584917865442-de89df76afd3",
+  ],
+  "book-tote": [
+    "photo-1575032617751-6ddec2089882",
+    "photo-1553062407-98eeb64c6a62",
+    "photo-1549439602-43ebca2327af",
+    "/images/goyard_tote_black.jpg",
+  ],
 
   // Louis Vuitton
-  "capucines": ["photo-1584917865442-de89df76afd3", "photo-1600950207944-0d63e8edbc3f", "photo-1523170335258-f5ed11844a49", "photo-1509631179647-0177331693ae"],
-  "neverfull": ["photo-1575032617751-6ddec2089882", "/images/goyard_tote_black.jpg", "photo-1605733513597-a8f8341084e6", "photo-1483985988355-763728e1935b"],
-  "alma-bb": ["photo-1566150905458-1bf1fc113f0d", "photo-1600950207944-0d63e8edbc3f", "photo-1591561954557-26941169b49e", "photo-1516762689617-e1cffcef479d"],
-  "petite-malle": ["photo-1553062407-98eeb64c6a62", "photo-1563178406-4cdc2923acbc", "photo-1523170335258-f5ed11844a49", "photo-1539109136881-3be0616acf4b"],
+  "capucines": [
+    "photo-1584917865442-de89df76afd3",
+    "/images/hero_luxury_bag.jpg",
+    "photo-1559563458-527698bf5295",
+    "photo-1601924994987-69e26d50dc26",
+  ],
+  "neverfull": [
+    "photo-1575032617751-6ddec2089882",
+    "/images/goyard_tote_black.jpg",
+    "photo-1553062407-98eeb64c6a62",
+    "photo-1549439602-43ebca2327af",
+  ],
+  "alma-bb": [
+    "photo-1566150905458-1bf1fc113f0d",
+    "photo-1591561954557-26941169b49e",
+    "photo-1544816155-12df9643f363",
+    "photo-1584917865442-de89df76afd3",
+  ],
+  "petite-malle": [
+    "photo-1553062407-98eeb64c6a62",
+    "photo-1547949003-9792a18a2601",
+    "photo-1594223274512-ad4803739b7c",
+    "photo-1584917865442-de89df76afd3",
+  ],
 
   // Bottega Veneta
-  "jodie": ["/images/bottega_jodie_brown.jpg", "photo-1614179689702-355944cd0918", "photo-1581338834647-b0fb40704e21", "photo-1516762689617-e1cffcef479d"],
-  "andiamo": ["photo-1584917865442-de89df76afd3", "photo-1614179689702-355944cd0918", "/images/bottega_jodie_brown.jpg", "photo-1509631179647-0177331693ae"],
+  "jodie": [
+    "/images/bottega_jodie_brown.jpg",
+    "photo-1590874103328-eac38a683ce7",
+    "photo-1581338834647-b0fb40704e21",
+    "photo-1509319117193-57bab727e09d",
+  ],
+  "andiamo": [
+    "photo-1584917865442-de89df76afd3",
+    "/images/bottega_jodie_brown.jpg",
+    "photo-1590874103328-eac38a683ce7",
+    "photo-1575032617751-6ddec2089882",
+  ],
 
   // Goyard
-  "saint-louis": ["/images/goyard_tote_black.jpg", "photo-1575032617751-6ddec2089882", "photo-1549439602-43ebca2327af", "photo-1483985988355-763728e1935b"],
+  "saint-louis": [
+    "/images/goyard_tote_black.jpg",
+    "photo-1575032617751-6ddec2089882",
+    "photo-1549439602-43ebca2327af",
+    "photo-1553062407-98eeb64c6a62",
+  ],
 
   // Celine & Others
-  "triomphe": ["photo-1590874103328-eac38a683ce7", "photo-1600950207944-0d63e8edbc3f", "photo-1509319117193-57bab727e09d", "photo-1490481651871-ab68de25d43d"],
-  "puzzle": ["photo-1601924994987-69e26d50dc26", "photo-1509319117193-57bab727e09d", "photo-1581338834647-b0fb40704e21", "photo-1516762689617-e1cffcef479d"],
+  "triomphe": [
+    "photo-1590874103328-eac38a683ce7",
+    "photo-1509319117193-57bab727e09d",
+    "photo-1601924994987-69e26d50dc26",
+    "photo-1584917865442-de89df76afd3",
+  ],
+  "puzzle": [
+    "photo-1601924994987-69e26d50dc26",
+    "photo-1509319117193-57bab727e09d",
+    "photo-1581338834647-b0fb40704e21",
+    "photo-1590874103328-eac38a683ce7",
+  ],
 };
 
 /**
